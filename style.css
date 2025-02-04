@@ -432,3 +432,11 @@ td:hover p {
 	width: 30svw;
 	font-size: 1.5rem;
 }
+.card {
+	transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+	transform: translateY(-10px);
+  }
+  
