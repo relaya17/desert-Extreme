@@ -1,6 +1,6 @@
-function scrollToActivities() {
-    document.getElementById('activities').scrollIntoView({ behavior: 'smooth' });
-}
+document.addEventListener('DOMContentLoaded', function() {
+    updateVideo();
+});
 
 const videos = [
     "images/kobiVideo.mp4",
@@ -8,24 +8,22 @@ const videos = [
     "images/hhh.mp4"
 ];
 
-// מחשבים איזה סרטון להציג כל 10 שעות
-function getVideoIndex() {
-    const currentTime = new Date().getTime();
-    const timeSlot = Math.floor(currentTime / (15 * 60 * 1000)); // מחלקים לזמן של 10 שעות
-    return timeSlot % videos.length; // מחזוריות לפי מספר הסרטונים
-}
-
 // שינוי הסרטון בהתאם לזמן
 function updateVideo() {
     const videoElement = document.getElementById("headerVideo");
     const sourceElement = document.getElementById("videoSource");
 
     if (videoElement && sourceElement) {
-        const newVideo = videos[getVideoIndex()];
+        const newVideo = videos[0]; // משתמש בסרטון הראשון תמיד (שמור בלולאה)
         sourceElement.src = newVideo;
         videoElement.load(); // טוען את הווידאו מחדש
+        videoElement.play(); // מפעיל את הסרטון
+        videoElement.loop = true; // הפעלת לולאת סרטון
+    } else {
+        console.error("לא נמצא אלמנט הווידאו או המקור.");
     }
 }
+
 document.addEventListener("DOMContentLoaded", function () {
     // יצירת אלמנט הקונטיינר הצף לנגישות
     const accessibilityContainer = document.createElement("div");
@@ -49,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("accessibility-panel").classList.toggle("hidden");
     });
 });
+
 
 // פונקציות נגישות
 let fontSizeIncreased = false;
