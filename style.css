@@ -452,5 +452,23 @@ td:hover p {
 .high-contrast {
 	background-color: black !important;
 	color: yellow !important;
+  }.card-body {
+	position: relative;
+	padding: 15px;
   }
+  
+  .card-title-overlay {
+	background-color: rgba(0, 0, 0, 0.6); /* רקע כהה עם שקיפות */
+	padding: 10px;
+	border-radius: 5px;
+	display: inline-block;
+  }
+  
+  .card-text {
+	background-color: rgba(0, 0, 0, 0.6); /* רקע כהה עם שקיפות */
+	padding: 10px;
+	border-radius: 5px;
+	display: inline-block;
+  }
+  
   
