@@ -19,17 +19,20 @@ function updateVideoLoop() {
         return;
     }
 
+    // מגדיר את הסרטון הראשון ומפעיל אותו מיד
+    sourceElement.src = videos[currentVideoIndex];
+    videoElement.load();
+    videoElement.play().catch(error => console.error("שגיאה בניגון הסרטון:", error));
+
     videoElement.addEventListener("ended", function () {
         // מעבר לסרטון הבא בלולאה
         currentVideoIndex = (currentVideoIndex + 1) % videos.length;
         sourceElement.src = videos[currentVideoIndex];
         videoElement.load();
-        videoElement.play();
+        videoElement.play().catch(error => console.error("שגיאה בניגון הסרטון הבא:", error));
     });
-
-    // הפעלה ראשונית
-    videoElement.play();
 }
+
 
 document.addEventListener("DOMContentLoaded", function () {
     // יצירת אלמנט הקונטיינר הצף לנגישות
