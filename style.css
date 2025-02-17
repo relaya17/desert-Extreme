@@ -8,6 +8,9 @@
 	transition: all 0.3s ease-in-out;
 	font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
 }
+.favicon {
+    border-radius: 50%;
+}
 
 
 .header {
