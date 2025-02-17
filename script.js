@@ -1,27 +1,34 @@
-document.addEventListener('DOMContentLoaded', function() {
-    updateVideo();
+document.addEventListener('DOMContentLoaded', function () {
+    updateVideoLoop();
 });
 
 const videos = [
-    "images/kobiVideo.mp4",
-    "images/kkk.mp4",
-    "images/hhh.mp4"
+    "https://res.cloudinary.com/dora8sxcb/video/upload/v1739794956/hhh_jeih69.mp4",
+    "https://res.cloudinary.com/dora8sxcb/video/upload/v1739795032/kkk_j42asq.mp4",
+    "https://res.cloudinary.com/dora8sxcb/video/upload/v1739723154/kobiVideo_ldmi69.mp4"
 ];
 
-// שינוי הסרטון בהתאם לזמן
-function updateVideo() {
+let currentVideoIndex = 0;
+
+function updateVideoLoop() {
     const videoElement = document.getElementById("headerVideo");
     const sourceElement = document.getElementById("videoSource");
 
-    if (videoElement && sourceElement) {
-        const newVideo = videos[0]; // משתמש בסרטון הראשון תמיד (שמור בלולאה)
-        sourceElement.src = newVideo;
-        videoElement.load(); // טוען את הווידאו מחדש
-        videoElement.play(); // מפעיל את הסרטון
-        videoElement.loop = true; // הפעלת לולאת סרטון
-    } else {
+    if (!videoElement || !sourceElement) {
         console.error("לא נמצא אלמנט הווידאו או המקור.");
+        return;
     }
+
+    videoElement.addEventListener("ended", function () {
+        // מעבר לסרטון הבא בלולאה
+        currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+        sourceElement.src = videos[currentVideoIndex];
+        videoElement.load();
+        videoElement.play();
+    });
+
+    // הפעלה ראשונית
+    videoElement.play();
 }
 
 document.addEventListener("DOMContentLoaded", function () {
