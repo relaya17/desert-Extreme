@@ -119,4 +119,23 @@ function showPhoneNumber() {
     const phoneNumber = document.getElementById('phone-number');
     phoneNumber.style.display = 'block';  // נחשוף את המספר אחרי לחיצה
   }
-  
+  document.addEventListener("DOMContentLoaded", function () {
+    const videoPlayer = document.getElementById("videoPlayer");
+    const videoSource = document.getElementById("videoSource");
+
+    // רשימת הסרטונים לסירוגין
+    const videos = [
+        "https://res.cloudinary.com/dora8sxcb/video/upload/v1739733574/one.mp4_nabbdp.mp4",
+        "https://res.cloudinary.com/dora8sxcb/video/upload/v1739794183/action2.png_ftcfgr.mp4"
+    ];
+
+    let currentVideoIndex = 0;
+
+    videoPlayer.addEventListener("ended", function () {
+        // עדכון לאינדקס הבא (בלולאה)
+        currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+        videoSource.src = videos[currentVideoIndex];
+        videoPlayer.load(); // טוען את הווידאו החדש
+        videoPlayer.play(); // מפעיל אותו מחדש
+    });
+});
