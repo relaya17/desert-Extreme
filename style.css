@@ -513,15 +513,5 @@ td:hover p {
 	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   }
   
-  @media (max-width: 768px) {
-	.flip-card {
-	  height: 250px;
-	}
-  }
   
-  @media (max-width: 576px) {
-	.flip-card {
-	  height: 200px;
-	}
-  }
   
