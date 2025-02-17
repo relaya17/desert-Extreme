@@ -11,7 +11,7 @@ const videos = [
 let currentVideoIndex = 0;
 
 function updateVideoLoop() {
-    const videoElement = document.getElementById("headerVideo");
+    const videoElement = document.getElementById("videoPlayer");
     const sourceElement = document.getElementById("videoSource");
 
     if (!videoElement || !sourceElement) {
