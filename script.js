@@ -1,38 +1,35 @@
-document.addEventListener('DOMContentLoaded', function () {
-    updateVideoLoop();
-});
+// document.addEventListener('DOMContentLoaded', function () {
+//     updateVideoLoop();
+// });
 
-const videos = [
-    "https://res.cloudinary.com/dora8sxcb/video/upload/v1739794956/hhh_jeih69.mp4",
-    "https://res.cloudinary.com/dora8sxcb/video/upload/v1739795032/kkk_j42asq.mp4",
-    "https://res.cloudinary.com/dora8sxcb/video/upload/v1739723154/kobiVideo_ldmi69.mp4"
-];
+// const videos = [
+//     "https://res.cloudinary.com/dora8sxcb/video/upload/v1739794956/hhh_jeih69.mp4",
+//     "https://res.cloudinary.com/dora8sxcb/video/upload/v1739795032/kkk_j42asq.mp4",
+//     "https://res.cloudinary.com/dora8sxcb/video/upload/v1739723154/kobiVideo_ldmi69.mp4"
+// ];
 
-let currentVideoIndex = 0;
+// let currentVideoIndex = 0;
 
-function updateVideoLoop() {
-    const videoElement = document.getElementById("videoPlayer");
-    const sourceElement = document.getElementById("videoSource");
+// function updateVideoLoop() {
+//     const videoElement = document.getElementById("videoPlayer");
+//     const sourceElement = document.getElementById("videoSource");
 
-    if (!videoElement || !sourceElement) {
-        console.error("לא נמצא אלמנט הווידאו או המקור.");
-        return;
-    }
+//     if (!videoElement || !sourceElement) {
+//         console.error("לא נמצא אלמנט הווידאו או המקור.");
+//         return;
+//     }
 
-    // מגדיר את הסרטון הראשון ומפעיל אותו מיד
-    sourceElement.src = videos[currentVideoIndex];
-    videoElement.load();
-    videoElement.play().catch(error => console.error("שגיאה בניגון הסרטון:", error));
+//     videoElement.addEventListener("ended", function () {
+//         // מעבר לסרטון הבא בלולאה
+//         currentVideoIndex = (currentVideoIndex + 1) % videos.length;
+//         sourceElement.src = videos[currentVideoIndex];
+//         videoElement.load();
+//         videoElement.play();
+//     });
 
-    videoElement.addEventListener("ended", function () {
-        // מעבר לסרטון הבא בלולאה
-        currentVideoIndex = (currentVideoIndex + 1) % videos.length;
-        sourceElement.src = videos[currentVideoIndex];
-        videoElement.load();
-        videoElement.play().catch(error => console.error("שגיאה בניגון הסרטון הבא:", error));
-    });
-}
-
+//     // הפעלה ראשונית
+//     videoElement.play();
+// }
 
 document.addEventListener("DOMContentLoaded", function () {
     // יצירת אלמנט הקונטיינר הצף לנגישות
