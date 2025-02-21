@@ -16,23 +16,9 @@
 .header {
 	width: 100%;
 }
-.logo1 {
-	width: 80px !important;
-	height: 80px !important;
-	object-fit: cover;
-	border-radius: 50%;
-	display: block;
-  }
-  
-  
-                    /* 
-                    width: '40px',
-					height: '40px',
-					marginRight: '10px',
-					borderRadius: '50%',
-					objectFit: 'cover'
-				   */
 
+  
+                 
 
 .header-info {
 	background: rgba(0, 0, 0, 0.1);
@@ -46,7 +32,6 @@
 
 .header-container {
 	height: 60vh;
-
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -85,12 +70,10 @@ body {
 	padding: 5rem;
 	border-radius: 2rem;
 	background: "rgba(255, 255, 255, 0.2)";
-					box-shadow: "0px 4px 10px rgba(0, 0, 0, 0.3)";
-
-
-
-
+	box-shadow: "0px 4px 10px rgba(0, 0, 0, 0.3)";
 }
+
+
 
 .card {
 	background: rgba(0, 0, 0, 0.7);
@@ -287,7 +270,8 @@ body {
 	display: block;
 	opacity: 1;
 
-}.whatsapp-btn {
+}
+.whatsapp-btn {
 	position: fixed;
 	right: 2rem; /* ימינה */
 	bottom: 2rem; /* למעלה */
