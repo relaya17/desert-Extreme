@@ -131,9 +131,12 @@ body {
 /* כפתור נגישות */
 #accessibility-btn {
 	background: #007bff; /* כחול */
+	position: absolute;
+	top: 2.5rem;
+	left: 0.5rem;
 	border: none;
-	width: 60px;
-	height: 60px;
+	width: 50px;
+	height: 50px;
 	font-size: 18px;
 	cursor: pointer;
 	border-radius: 50%;
@@ -141,23 +144,6 @@ body {
 	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 	transition: transform 0.2s ease-in-out, background 0.2s;
 }
-/* חלון הנגישות הצף */
-#accessibility-panel {
-    position: absolute;
-	top: 2.5rem;
-	left: 2.5rem;
-	background: white;
-	border-radius: 10px;
-	padding: 15px;
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	width: 220px;
-	text-align: center;
-	font-size: 16px;
-}
-
 #accessibility-btn:hover {
 	transform: scale(1.1);
 	background: #0056b3; /* כהה יותר בהובר */
