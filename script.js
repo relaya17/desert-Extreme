@@ -146,3 +146,6 @@ function showPhoneNumber() {
         videoPlayer.play(); // מפעיל אותו מחדש
     });
 });
+
+
+
