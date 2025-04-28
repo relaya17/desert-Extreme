@@ -1,15 +1,14 @@
 // אתחול לוח שנה עם הגדרה לעברית
 flatpickr("#datePicker", {
-  locale: "he",
-  dateFormat: "Y-m-d",
+  locale: "he",  // הגדרת השפה לעברית
+  dateFormat: "Y-m-d",  // פורמט תאריך
   disable: [
     function(date) {
-      // אם יש תאריכים חסומים, חזור true (חסום)
-      return isDateUnavailable(date);  // פונקציה שתשווה אם התאריך חסום
+      return isDateUnavailable(date);  // אם התאריך חסום
     }
   ],
   onChange: function(selectedDates, dateStr, instance) {
-    // אם בחרו תאריך, יש לעדכן את שעות הפנוי/תפוס
+    // עדכון שעות זמינות אחרי בחירת תאריך
     updateAvailableTimes(dateStr);
   }
 });
@@ -21,7 +20,7 @@ function isDateUnavailable(date) {
   return unavailableDates.includes(formattedDate);
 }
 
-// שעות זמינות לבחירה
+// שעות זמינות לתאריך נבחר
 const timeOptions = {
   "2025-04-28": ["08:00", "10:00", "12:00", "14:00"],  // שעות לתאריך מסוים
   "2025-04-29": ["09:00", "11:00", "13:00", "15:00"]
@@ -30,7 +29,7 @@ const timeOptions = {
 function updateAvailableTimes(date) {
   const timeSelect = document.getElementById("timeSelect");
   timeSelect.innerHTML = ''; // מנקה את אפשרויות השעות הקודמות
-  
+
   // אם יש שעות זמינות לתאריך הנבחר
   if (timeOptions[date]) {
     timeOptions[date].forEach(time => {

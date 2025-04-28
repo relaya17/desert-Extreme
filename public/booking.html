@@ -6,8 +6,9 @@
   <title>הזמנת טרקטורון</title>
 
   <!-- קבצי CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
   <link rel="stylesheet" href="booking.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/>
+  
 </head>
 <body>
 
@@ -19,8 +20,14 @@
     <input type="number" id="userAge" placeholder="גיל" />
 
     <!-- תאריך ושעה -->
-    <input type="text" id="datePicker" placeholder="בחר תאריך">
-    <select id="timeSelect"></select>
+    <label for="datePicker">בחר תאריך:</label>
+    <input type="text" id="datePicker" placeholder="בחר תאריך" readonly>
+    
+    <label for="timeSelect">בחר שעה:</label>
+    <select id="timeSelect">
+      <option value="">בחר שעה</option>
+    </select>
+
     <button onclick="bookSlot()">הזמן</button>
 
     <div id="confirmation"></div>

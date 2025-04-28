@@ -1,66 +1,44 @@
-/* עיצוב מרכזי לדף */
 body {
-  font-family: 'Roboto', sans-serif;
-  background-color: #f4f4f9;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  font-family: 'Arial', sans-serif;
+  direction: rtl;
+  text-align: right;
+  padding: 20px;
+  background-color: #f4f4f4;
 }
 
 #booking-box {
-  background-color: #ffffff;
-  padding: 30px;
+  background-color: #fff;
   border-radius: 10px;
+  padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  text-align: center;
-  width: 100%;
-  max-width: 400px;
-}
-
-h2 {
-  margin-bottom: 20px;
-  font-size: 24px;
-  color: #333;
+  width: 300px;
+  margin: 0 auto;
 }
 
 input, select, button {
-  margin: 10px 0;
-  padding: 10px;
   width: 100%;
+  padding: 10px;
+  margin: 10px 0;
   border-radius: 5px;
   border: 1px solid #ccc;
-  box-sizing: border-box;
 }
 
 button {
   background-color: #4CAF50;
   color: white;
-  border: none;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 button:hover {
   background-color: #45a049;
 }
 
+label {
+  display: block;
+  font-weight: bold;
+}
+
 #confirmation {
   margin-top: 20px;
-  font-size: 18px;
-  color: #28a745;
-}
-
-/* עיצוב ללוח שנה */
-.flatpickr-calendar {
-  border-radius: 10px;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* עיצוב תפריט שעות */
-#timeSelect {
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  font-weight: bold;
 }
