@@ -53,16 +53,14 @@ button:hover {
   color: #28a745;
 }
 
-/* סגנונות ללוח השנה */
+/* עיצוב ללוח שנה */
 .flatpickr-calendar {
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* עיצוב לדף תודה */
-#thank-you {
-  font-size: 24px;
-  color: #4CAF50;
-  margin-top: 20px;
-  text-align: center;
+/* עיצוב תפריט שעות */
+#timeSelect {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
 }

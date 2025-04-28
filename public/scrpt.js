@@ -1,4 +1,4 @@
-// אתחול לוח שנה
+// אתחול לוח שנה עם הגדרה לעברית
 flatpickr("#datePicker", {
   locale: "he",
   dateFormat: "Y-m-d",
@@ -7,25 +7,46 @@ flatpickr("#datePicker", {
       // אם יש תאריכים חסומים, חזור true (חסום)
       return isDateUnavailable(date);  // פונקציה שתשווה אם התאריך חסום
     }
-  ]
+  ],
+  onChange: function(selectedDates, dateStr, instance) {
+    // אם בחרו תאריך, יש לעדכן את שעות הפנוי/תפוס
+    updateAvailableTimes(dateStr);
+  }
 });
 
-// פונקציה לבדוק אם תאריך חסום
-const unavailableDates = ["2025-04-30", "2025-05-01"]; // תאריכים חסומים
+// רשימת תאריכים חסומים
+const unavailableDates = ["2025-04-30", "2025-05-01"]; // דוגמת תאריכים חסומים
 function isDateUnavailable(date) {
   const formattedDate = date.toISOString().split("T")[0]; // פורמט YYYY-MM-DD
   return unavailableDates.includes(formattedDate);
 }
 
-// הוספת שעות זמינות לבחירה
-const timeOptions = ["08:00", "10:00", "12:00", "14:00", "16:00"];
-const timeSelect = document.getElementById("timeSelect");
-timeOptions.forEach((time) => {
-  const option = document.createElement("option");
-  option.value = time;
-  option.textContent = time;
-  timeSelect.appendChild(option);
-});
+// שעות זמינות לבחירה
+const timeOptions = {
+  "2025-04-28": ["08:00", "10:00", "12:00", "14:00"],  // שעות לתאריך מסוים
+  "2025-04-29": ["09:00", "11:00", "13:00", "15:00"]
+};
+
+function updateAvailableTimes(date) {
+  const timeSelect = document.getElementById("timeSelect");
+  timeSelect.innerHTML = ''; // מנקה את אפשרויות השעות הקודמות
+  
+  // אם יש שעות זמינות לתאריך הנבחר
+  if (timeOptions[date]) {
+    timeOptions[date].forEach(time => {
+      const option = document.createElement("option");
+      option.value = time;
+      option.textContent = time;
+      timeSelect.appendChild(option);
+    });
+  } else {
+    const option = document.createElement("option");
+    option.value = '';
+    option.textContent = "אין שעות זמינות לתאריך זה";
+    option.disabled = true;
+    timeSelect.appendChild(option);
+  }
+}
 
 // פונקציה להזמנת טרקטורון
 function bookSlot() {
@@ -39,16 +60,6 @@ function bookSlot() {
     alert("אנא מלא את כל השדות.");
     return;
   }
-
-  // שמירה של ההזמנה
-  const booking = {
-    name,
-    age,
-    date,
-    time
-  };
-
-  localStorage.setItem("booking", JSON.stringify(booking));
 
   // הצגת אישור
   document.getElementById("confirmation").textContent = `ההזמנה בוצעה בהצלחה! שלום ${name}, ההזמנה שלך היא בתאריך ${date} בשעה ${time}.`;
