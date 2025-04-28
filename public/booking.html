@@ -6,14 +6,18 @@
   <title>הזמנת טרקטורון</title>
 
   <!-- קבצי CSS -->
+  <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/>
-  <link rel="stylesheet" href="/booking.css">
 
 </head>
 <body>
 
   <div id="booking-box">
     <h2>הזמנת טרקטורון</h2>
+    <!-- שדות אישיים -->
+    <input type="text" id="userName" placeholder="שם מלא" />
+    <input type="number" id="userAge" placeholder="גיל" />
+    <!-- תאריך ושעה -->
     <input type="text" id="datePicker" placeholder="בחר תאריך">
     <select id="timeSelect"></select>
     <button onclick="bookSlot()">הזמן</button>
@@ -23,7 +27,7 @@
   <!-- קבצי JS -->
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/he.js"></script>
-  <script src="/scrpt.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>

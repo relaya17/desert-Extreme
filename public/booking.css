@@ -1,39 +1,68 @@
+/* עיצוב מרכזי לדף */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    direction: rtl;
-    padding: 30px;
-  }
-  
-  #booking-box {
-    max-width: 400px;
-    margin: auto;
-    background: #f2f2f2;
-    padding: 20px;
-    border-radius: 8px;
-  }
-  
-  input, select, button {
-    margin: 10px 0;
-    padding: 10px;
-    width: 100%;
-    font-size: 16px;
-  }
-  
-  button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #218838;
-  }
-  
-  #confirmation {
-    margin-top: 20px;
-    font-weight: bold;
-    color: green;
-  }
-  
+  font-family: 'Roboto', sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#booking-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #333;
+}
+
+input, select, button {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#confirmation {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #28a745;
+}
+
+/* סגנונות ללוח השנה */
+.flatpickr-calendar {
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* עיצוב לדף תודה */
+#thank-you {
+  font-size: 24px;
+  color: #4CAF50;
+  margin-top: 20px;
+  text-align: center;
+}
