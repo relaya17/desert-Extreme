@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>תשלום</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div id="payment-box">
+    <h2>דף תשלום</h2>
+    <p>נא להכניס את פרטי כרטיס האשראי שלך על מנת להשלים את ההזמנה.</p>
+    <form id="payment-form">
+      <input type="text" placeholder="שם על כרטיס האשראי" required />
+      <input type="number" placeholder="מספר כרטיס" required />
+      <input type="text" placeholder="תוקף (MM/YY)" required />
+      <input type="number" placeholder="קוד CVV" required />
+      <button type="submit">שלם עכשיו</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("payment-form").onsubmit = function(e) {
+      e.preventDefault();
+      // כאן תוכל להוסיף את הלוגיקה של תשלום באמצעות API
+      alert("תשלום בוצע בהצלחה! תודה על ההזמנה.");
+      window.location.href = "thank-you.html"; // הפניית לדף תודה
+    };
+  </script>
+</body>
+</html>
