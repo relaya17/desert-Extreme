@@ -1,0 +1,151 @@
+/* Footer Styles */
+@import url("variables.css");
+
+.footer {
+	background-color: var(--dark);
+	color: var(--light);
+	padding: 4rem 0 2rem;
+}
+
+.footer h4,
+.footer h5 {
+	color: #fff;
+	font-weight: bold;
+	margin-bottom: 1.5rem;
+}
+
+.footer p,
+.footer a {
+	color: var(--gray);
+	text-decoration: none;
+	transition: var(--transition-fast);
+}
+
+.footer a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+/* Social Links */
+.social-links a {
+	display: inline-block;
+	width: 36px;
+	height: 36px;
+	background-color: rgba(255, 255, 255, 0.1);
+	color: #fff;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 36px;
+	transition: var(--transition);
+}
+
+.social-links a:hover {
+	background-color: var(--primary-color);
+	transform: translateY(-3px);
+}
+
+/* Footer Links */
+.footer-links {
+	list-style: none;
+	padding: 0;
+}
+
+.footer-links li {
+	margin-bottom: 10px;
+}
+
+.footer-links a {
+	display: block;
+	transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+	padding-right: 5px;
+}
+
+/* Footer Form */
+.footer-form input,
+.footer-form textarea {
+	background-color: rgba(255, 255, 255, 0.1);
+	border: none;
+	color: #fff;
+	border-radius: var(--border-radius);
+	padding: 0.75rem;
+	margin-bottom: 1rem;
+}
+
+.footer-form input::placeholder,
+.footer-form textarea::placeholder {
+	color: var(--gray);
+}
+
+.footer-form input:focus,
+.footer-form textarea:focus {
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #fff;
+	box-shadow: none;
+}
+
+.footer-form button {
+	background-color: var(--primary-color);
+	border: none;
+	font-weight: 600;
+	padding: 0.75rem 1.5rem;
+	border-radius: var(--border-radius);
+	transition: var(--transition);
+}
+
+.footer-form button:hover {
+	background-color: var(--primary-dark);
+	transform: translateY(-2px);
+}
+
+/* Horizontal Line */
+hr {
+	border-color: rgba(255, 255, 255, 0.1);
+	margin: 2rem 0;
+}
+
+/* Bottom Footer */
+.payment-methods {
+	opacity: 0.7;
+	transition: var(--transition-fast);
+}
+
+.payment-methods:hover {
+	opacity: 1;
+}
+
+/* Contact Info */
+.contact-info p {
+	margin-bottom: 0.5rem;
+	display: flex;
+	align-items: center;
+}
+
+.contact-info i {
+	margin-left: 0.5rem;
+	width: 20px;
+	text-align: center;
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+	.footer {
+		text-align: center;
+	}
+
+	.social-links {
+		margin-bottom: 2rem;
+	}
+
+	.footer-links {
+		margin-bottom: 2rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.footer {
+		padding: 3rem 0 1rem;
+	}
+}

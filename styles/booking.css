@@ -1,0 +1,219 @@
+/* Booking and Payment Section Styles */
+@import url("variables.css");
+
+.payment-section {
+	background-color: var(--light);
+	padding: 80px 0;
+}
+
+/* Booking Tabs */
+.booking-tabs .nav-link {
+	border-radius: 30px;
+	padding: 10px 25px;
+	margin: 0 5px;
+	font-weight: 600;
+	color: var(--gray-dark);
+	transition: var(--transition);
+}
+
+.booking-tabs .nav-link.active {
+	background-color: var(--primary-color);
+	color: white;
+}
+
+/* Package Cards */
+.package-card {
+	background-color: white;
+	border-radius: var(--border-radius-lg);
+	overflow: hidden;
+	box-shadow: var(--shadow);
+	transition: var(--transition);
+	position: relative;
+	height: 100%;
+}
+
+.package-card:hover {
+	transform: translateY(-10px);
+	box-shadow: var(--shadow-lg);
+}
+
+.package-card.popular {
+	border: 2px solid var(--secondary-color);
+	transform: scale(1.03);
+}
+
+.popular-tag {
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: var(--secondary-color);
+	color: #000;
+	padding: 5px 15px;
+	font-weight: bold;
+	font-size: 0.8rem;
+	border-radius: 0 var(--border-radius-lg) 0 var(--border-radius-lg);
+}
+
+/* Package Header */
+.package-header {
+	background-color: var(--light);
+	padding: 20px;
+	text-align: center;
+	border-bottom: 1px solid var(--gray-light);
+}
+
+.package-title {
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+.package-price {
+	color: var(--primary-color);
+}
+
+.package-price .price {
+	font-size: 1.8rem;
+	font-weight: bold;
+}
+
+.package-price .per-person {
+	font-size: 0.9rem;
+	color: var(--gray);
+}
+
+/* Package Body */
+.package-body {
+	padding: 20px;
+}
+
+.package-features {
+	list-style: none;
+	padding: 0;
+	margin-bottom: 20px;
+}
+
+.package-features li {
+	padding: 8px 0;
+	border-bottom: 1px dashed var(--gray-light);
+}
+
+.package-features li:last-child {
+	border-bottom: none;
+}
+
+.package-features .fas.fa-check {
+	color: var(--success);
+	margin-left: 8px;
+}
+
+.package-features .fas.fa-times {
+	color: var(--danger);
+	margin-left: 8px;
+}
+
+.package-btn {
+	font-weight: 600;
+	padding: 10px;
+}
+
+/* Booking Form */
+.booking-form .card-header {
+	background-color: var(--primary-color);
+}
+
+.booking-form .form-control {
+	padding: 0.75rem;
+	border-radius: var(--border-radius);
+}
+
+.booking-form label {
+	font-weight: 500;
+	margin-bottom: 0.5rem;
+}
+
+.security-badges {
+	color: var(--gray);
+	font-size: 0.9rem;
+}
+
+/* Custom Booking Form */
+.custom-booking-form {
+	background-color: white;
+	padding: 2rem;
+	border-radius: var(--border-radius-lg);
+	box-shadow: var(--shadow);
+}
+
+/* Trust Elements */
+.benefit-card,
+.trust-card {
+	background-color: white;
+	border-radius: var(--border-radius);
+	box-shadow: var(--shadow);
+	height: 100%;
+	padding: 1.5rem;
+	transition: var(--transition-fast);
+}
+
+.benefit-card:hover,
+.trust-card:hover {
+	transform: translateY(-5px);
+	box-shadow: var(--shadow-lg);
+}
+
+.benefit-card i,
+.trust-card i {
+	color: var(--primary-color);
+	margin-bottom: 1rem;
+}
+
+.trust-elements {
+	margin-top: 4rem;
+}
+
+/* Call Now Button */
+.callNowBtn {
+	padding: 1rem 2rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+	margin-bottom: 1rem;
+}
+
+.phone-number {
+	font-size: 1.2rem;
+	font-weight: bold;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+
+.phone-number.visible {
+	opacity: 1;
+}
+
+/* WhatsApp Button */
+.whatsapp-btn {
+	width: auto;
+	border-radius: var(--border-radius);
+	font-weight: bold;
+	box-shadow: var(--shadow);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+	.booking-tabs .nav-link {
+		padding: 8px 15px;
+		font-size: 0.9rem;
+	}
+
+	.package-card.popular {
+		transform: scale(1);
+	}
+
+	.package-card {
+		margin-bottom: 1.5rem;
+	}
+
+	.package-features li {
+		font-size: 0.9rem;
+	}
+}

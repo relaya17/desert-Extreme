@@ -1,0 +1,33 @@
+/* Logo styling */
+.site-logo {
+	height: 40px;
+	width: auto;
+	transition: transform 0.3s ease;
+}
+
+.site-logo:hover {
+	transform: scale(1.05);
+}
+
+/* For the navbar */
+.navbar-brand .site-logo {
+	margin-right: 8px;
+	vertical-align: middle;
+}
+
+/* For the footer */
+.footer .site-logo {
+	height: 60px;
+	margin-bottom: 15px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+	.site-logo {
+		height: 35px;
+	}
+
+	.footer .site-logo {
+		height: 50px;
+	}
+}

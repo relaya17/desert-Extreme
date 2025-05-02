@@ -1,0 +1,85 @@
+/* Gallery and Carousel Styles */
+@import url("variables.css");
+
+/* Image Gallery */
+#image-gallery {
+	margin-top: 2rem;
+	margin-bottom: 2rem;
+}
+
+.carousel {
+	border-radius: var(--border-radius);
+	overflow: hidden;
+	box-shadow: var(--shadow);
+}
+
+.carousel-item {
+	height: 500px;
+}
+
+.carousel-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* Video Player */
+.ratio {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	border-radius: var(--border-radius);
+	box-shadow: var(--shadow);
+}
+
+.ratio-16x9 {
+	padding-top: 56.25%;
+}
+
+.ratio video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: var(--border-radius);
+}
+
+#videoPlayer {
+	background-color: #000;
+}
+
+/* About Us Cards */
+.header-info {
+	padding: 4rem 0;
+}
+
+.header-info .card {
+	border-radius: var(--border-radius);
+	transition: var(--transition);
+	box-shadow: var(--shadow);
+}
+
+.header-info .card:hover {
+	transform: translateY(-5px);
+	box-shadow: var(--shadow-lg);
+}
+
+/* Media Queries */
+@media (max-width: 992px) {
+	.carousel-item {
+		height: 400px;
+	}
+}
+
+@media (max-width: 768px) {
+	.carousel-item {
+		height: 300px;
+	}
+}
+
+@media (max-width: 576px) {
+	.carousel-item {
+		height: 200px;
+	}
+}
