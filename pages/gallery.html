@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="he">
 	<head>
@@ -1473,3 +1474,631 @@
 	</body>
 </html>
 >>>>>>> parent of a125062 (Revert "updated blog page + gallery")
+=======
+<!DOCTYPE html>
+<html lang="he">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="גלריית תמונות של טיולי אקשן במדבר" />
+		<meta name="author" content="Action in the Desert" />
+		<meta
+			name="keywords"
+			content="טיול, אדרנלין, נופים, מדבר, אקשן, גלריה, תמונות"
+		/>
+
+		<!-- Open Graph Meta Tags -->
+		<meta property="og:title" content="גלריה - אקשן במדבר" />
+		<meta property="og:type" content="website" />
+		<meta
+			property="og:url"
+			content="https://actioninthedesert.netlify.app/pages/gallery.html"
+		/>
+		<meta
+			property="og:image"
+			content="https://res.cloudinary.com/dora8sxcb/image/upload/t_Profile/v1739723085/pic_vaykxy.jpg"
+		/>
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta
+			property="og:description"
+			content="גלריית תמונות של טיולי אקשן במדבר"
+		/>
+
+		<!-- Twitter Card Meta Tags -->
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content="גלריה - אקשן במדבר" />
+		<meta
+			name="twitter:description"
+			content="גלריית תמונות של טיולי אקשן במדבר"
+		/>
+		<meta
+			name="twitter:image"
+			content="https://res.cloudinary.com/dora8sxcb/image/upload/t_Profile/v1739723085/pic_vaykxy.jpg"
+		/>
+
+		<title>גלריה - אקשן במדבר</title>
+
+		<!-- Favicon -->
+		<link
+			rel="icon"
+			href="../images/favicon.ico"
+			sizes="32x32"
+			type="image/x-icon"
+		/>
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- FontAwesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="../styles/main.css" />
+
+		<!-- Animation CSS -->
+		<link rel="stylesheet" href="../styles/animations.css" />
+
+		<!-- Gallery CSS -->
+		<link rel="stylesheet" href="../styles/gallery.css" />
+
+		<!-- Lottie Animation -->
+		<script src="https://cdn.jsdelivr.net/npm/lottie-web@5.7.5/build/player/lottie.min.js"></script>
+	</head>
+
+	<body>
+		<nav
+			class="navbar navbar-expand-lg navbar-light fixed-top modern-navbar sticky-top"
+		>
+			<div class="container-fluid px-0">
+				<a class="navbar-brand ms-3" href="../index.html">
+					<img
+						src="../assets/images/desert-adventure-logo.svg"
+						alt="אקשן במדבר"
+						class="site-logo"
+					/>
+				</a>
+				<button
+					class="navbar-toggler me-3"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="../index.html"
+								><i class="fas fa-home"></i> דף הבית</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../index.html#activities"
+								><i class="fas fa-hiking"></i> פעילויות</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="gallery.html"
+								><i class="fas fa-images"></i> גלריה</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../blog/blog.html"
+								><i class="fas fa-newspaper"></i> בלוג</a
+							>
+						</li>
+					</ul>
+					<div class="navbar-contact d-none d-lg-flex align-items-center me-3">
+						<a href="tel:0533919193" class="text-white me-3"
+							><i class="fas fa-phone-alt"></i> 053-391-9193</a
+						>
+					</div>
+					<a
+						href="../index.html#payment"
+						class="btn btn-warning nav-book-btn me-3"
+						><i class="fas fa-calendar-check"></i> הזמן עכשיו</a
+					>
+				</div>
+			</div>
+		</nav>
+
+		<div class="mobile-book-btn d-lg-none">
+			<a
+				href="../index.html#payment"
+				class="btn btn-warning btn-lg rounded-circle"
+			>
+				<i class="fas fa-calendar-check"></i>
+			</a>
+		</div>
+
+		<!-- Page Header -->
+		<div class="container-fluid page-header text-center text-white py-5">
+			<div class="py-5">
+				<h1 class="display-4 fw-bold">גלריית תמונות</h1>
+				<p class="lead">נופים עוצרי נשימה וחוויות בלתי נשכחות</p>
+			</div>
+		</div>
+
+		<!-- Main Gallery Content -->
+		<div class="container py-5">
+			<!-- Introduction Text -->
+			<div class="row mb-5">
+				<div class="col-lg-8 mx-auto text-center">
+					<h2 class="mb-4">הצצה לחוויות המדבר שלנו</h2>
+					<p class="lead">
+						גלריית התמונות שלנו מציגה את היופי המרהיב של מדבר אילת ואת חוויות
+						האקסטרים המרגשות שאנו מציעים. התמונות מספקות הצצה לנופים עוצרי
+						הנשימה, ההרפתקאות המסעירות והרגעים המיוחדים שתוכלו לחוות בטיולים
+						שלנו.
+					</p>
+				</div>
+			</div>
+
+			<!-- Main Carousel Gallery -->
+			<section id="image-gallery" class="mb-5">
+				<h3 class="text-center mb-4">גלריית תמונות מרכזית</h3>
+				<div
+					id="carouselExampleAutoplaying"
+					class="carousel slide"
+					data-bs-ride="carousel"
+					data-bs-interval="2000"
+				>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img
+								src="../images/favicon.ico"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="Image bbb"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/blou.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="Image bbb"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/haruds.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="haruds"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/sky.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="sky 3"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/image10.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="Image 10"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/pic.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="pic 3"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/image2.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="Image 2"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/kobi82.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="Image 2"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/kobi98.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="Image 2"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/kobi93.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="Image 2"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/kobi44.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="Image 2"
+							/>
+						</div>
+						<!-- הוסף עוד תמונות אם תרצה -->
+					</div>
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#carouselExampleAutoplaying"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#carouselExampleAutoplaying"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</section>
+
+			<!-- Gallery Categories -->
+			<section class="mb-5">
+				<h3 class="text-center mb-4">קטגוריות גלריה</h3>
+				<div class="row g-4">
+					<!-- Card Gallery Items - 6 cards for different categories -->
+					<div class="col-md-4">
+						<div class="gallery-category-card">
+							<img
+								src="../images/image2.png"
+								class="card-img-top"
+								alt="טיולי ג'יפים"
+							/>
+							<div class="card-body text-center">
+								<h5 class="card-title">טיולי ג'יפים</h5>
+								<p class="card-text">הרפתקאות ג'יפים מרגשות בנופי המדבר</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="gallery-category-card">
+							<img
+								src="../images/image7.png"
+								class="card-img-top"
+								alt="האגם הנעלם"
+							/>
+							<div class="card-body text-center">
+								<h5 class="card-title">האגם הנעלם</h5>
+								<p class="card-text">נופים מרהיבים של האגם הנעלם במדבר</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="gallery-category-card">
+							<img
+								src="../images/image4.png"
+								class="card-img-top"
+								alt="חיות הבר"
+							/>
+							<div class="card-body text-center">
+								<h5 class="card-title">חיות הבר</h5>
+								<p class="card-text">מפגשים מרתקים עם חיות הבר במדבר</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="gallery-category-card">
+							<img
+								src="../images/image3.png"
+								class="card-img-top"
+								alt="שקט פנימי"
+							/>
+							<div class="card-body text-center">
+								<h5 class="card-title">שקט פנימי</h5>
+								<p class="card-text">רגעים של שלווה ושקט בלב המדבר</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="gallery-category-card">
+							<img
+								src="../images/image5.png"
+								class="card-img-top"
+								alt="חוויה תנ״כית"
+							/>
+							<div class="card-body text-center">
+								<h5 class="card-title">חוויה תנ״כית</h5>
+								<p class="card-text">מסעות בעקבות ההיסטוריה התנ״כית</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-4">
+						<div class="gallery-category-card">
+							<img
+								src="../images/image6.png"
+								class="card-img-top"
+								alt="הרי אילת"
+							/>
+							<div class="card-body text-center">
+								<h5 class="card-title">הרי אילת</h5>
+								<p class="card-text">נופים מרהיבים של הרי אילת המדבריים</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Video Gallery Section -->
+			<section class="mb-5">
+				<h3 class="text-center mb-4">גלריית וידאו</h3>
+				<div class="row g-4">
+					<div class="col-md-6">
+						<div class="video-container">
+							<div class="ratio ratio-16x9">
+								<video controls>
+									<source
+										src="https://res.cloudinary.com/dora8sxcb/video/upload/v1739733574/one.mp4_nabbdp.mp4"
+										type="video/mp4"
+									/>
+									הדפדפן שלך אינו תומך בווידאו.
+								</video>
+							</div>
+							<div class="video-caption text-center mt-2">
+								<h5>מסע במדבר</h5>
+								<p>חוויה בלתי נשכחת של טיול ג'יפים בהרי אילת</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="video-container">
+							<div class="ratio ratio-16x9">
+								<video controls>
+									<source
+										src="https://res.cloudinary.com/dora8sxcb/video/upload/v1739794956/hhh_jeih69.mp4"
+										type="video/mp4"
+									/>
+									הדפדפן שלך אינו תומך בווידאו.
+								</video>
+							</div>
+							<div class="video-caption text-center mt-2">
+								<h5>הרפתקאות אקסטרים</h5>
+								<p>ריגושים ואדרנלין בטיולי שטח מאתגרים</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Call to Action -->
+			<div class="text-center mt-5 mb-5">
+				<h3 class="mb-4">רוצים לחוות את הנופים בעצמכם?</h3>
+				<a href="../index.html#payment" class="btn btn-warning btn-lg px-5 py-3"
+					>הזמינו טיול עכשיו</a
+				>
+			</div>
+		</div>
+
+		<a
+			href="https://wa.me/9720533919193?text=היי,%20אני%20רוצה%20פרטים%20על%20הטיול!"
+			target="_blank"
+			class="whatsapp-btn btn btn-success fixed-bottom m-3"
+		>
+			💬 צ'אט עם נציג!
+		</a>
+
+		<!-- Footer -->
+		<footer class="footer py-5 mt-5" dir="rtl">
+			<div class="container">
+				<div class="row">
+					<!-- Company Info -->
+					<div class="col-lg-4 mb-4">
+						<div class="text-lg-end mb-3">
+							<img
+								src="../assets/images/desert-adventure-logo.svg"
+								alt="אקשן במדבר"
+								class="site-logo"
+							/>
+						</div>
+						<h4 class="mb-4 text-end">אקשן במדבר</h4>
+						<p class="text-end">
+							חברת טיולים המתמחה בחוויות אקסטרים במדבר. מספקים שירותי תיירות
+							אדרנלין באיכות גבוהה מאז 2010.
+						</p>
+						<div class="contact-info mt-3 text-end">
+							<p><i class="fas fa-map-marker-alt ms-2"></i> אילת, ישראל</p>
+							<p>
+								<i class="fas fa-phone ms-2"></i>
+								<a href="tel:0533919193">053-391-9193</a>
+							</p>
+							<p>
+								<i class="fas fa-envelope ms-2"></i>
+								<a href="mailto:contact@desertextreme.com"
+									>contact@desertextreme.com</a
+								>
+							</p>
+						</div>
+						<div class="social-links mt-3 text-end">
+							<a
+								href="https://facebook.com/"
+								target="_blank"
+								class="ms-2"
+								aria-label="Facebook"
+								><i class="fab fa-facebook-f"></i
+							></a>
+							<a
+								href="https://instagram.com/"
+								target="_blank"
+								class="ms-2"
+								aria-label="Instagram"
+								><i class="fab fa-instagram"></i
+							></a>
+							<a
+								href="https://youtube.com/"
+								target="_blank"
+								class="ms-2"
+								aria-label="YouTube"
+								><i class="fab fa-youtube"></i
+							></a>
+							<a
+								href="https://tripadvisor.com/"
+								target="_blank"
+								aria-label="TripAdvisor"
+								><i class="fab fa-tripadvisor"></i
+							></a>
+						</div>
+					</div>
+
+					<!-- Quick Links -->
+					<div class="col-lg-2 col-md-6 mb-4">
+						<h5 class="mb-3 text-end">קישורים מהירים</h5>
+						<ul class="footer-links text-end list-unstyled">
+							<li>
+								<a href="../index.html"
+									><i class="fas fa-angle-left ms-1"></i> דף הבית</a
+								>
+							</li>
+							<li>
+								<a href="../index.html#activities"
+									><i class="fas fa-angle-left ms-1"></i> פעילויות</a
+								>
+							</li>
+							<li>
+								<a href="../index.html#payment"
+									><i class="fas fa-angle-left ms-1"></i> הזמנה</a
+								>
+							</li>
+							<li>
+								<a href="../blog/blog.html"
+									><i class="fas fa-angle-left ms-1"></i> בלוג</a
+								>
+							</li>
+							<li>
+								<a href="gallery.html"
+									><i class="fas fa-angle-left ms-1"></i> גלריה</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Activities -->
+					<div class="col-lg-2 col-md-6 mb-4">
+						<h5 class="mb-3 text-end">פעילויות</h5>
+						<ul class="footer-links text-end list-unstyled">
+							<li>
+								<a href="../index.html#payment"
+									><i class="fas fa-angle-left ms-1"></i> טיולי ג'יפים</a
+								>
+							</li>
+							<li>
+								<a href="../index.html#payment"
+									><i class="fas fa-angle-left ms-1"></i> רכיבת שטח</a
+								>
+							</li>
+							<li>
+								<a href="../index.html#payment"
+									><i class="fas fa-angle-left ms-1"></i> טיולי רייזר</a
+								>
+							</li>
+							<li>
+								<a href="../index.html#payment"
+									><i class="fas fa-angle-left ms-1"></i> טיולי טרקטורונים</a
+								>
+							</li>
+							<li>
+								<a href="../index.html#payment"
+									><i class="fas fa-angle-left ms-1"></i> חבילות משפחתיות</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Contact Form -->
+					<div class="col-lg-4 mb-4">
+						<h5 class="mb-3 text-end">יצירת קשר מהירה</h5>
+						<form class="footer-form text-end">
+							<div class="mb-3">
+								<input
+									type="text"
+									class="form-control text-end"
+									placeholder="שם מלא"
+									required
+								/>
+							</div>
+							<div class="mb-3">
+								<input
+									type="email"
+									class="form-control text-end"
+									placeholder="אימייל"
+									required
+								/>
+							</div>
+							<div class="mb-3">
+								<input
+									type="tel"
+									class="form-control text-end"
+									placeholder="טלפון"
+									required
+								/>
+							</div>
+							<div class="mb-3">
+								<textarea
+									class="form-control text-end"
+									rows="3"
+									placeholder="הודעה"
+									required
+								></textarea>
+							</div>
+							<button type="submit" class="btn btn-primary">שלח הודעה</button>
+						</form>
+					</div>
+				</div>
+
+				<hr class="my-4" />
+
+				<!-- Bottom Footer -->
+				<div class="row align-items-center">
+					<div class="col-md-6 text-md-end">
+						<p class="mb-0">&copy; 2024 אקשן במדבר. כל הזכויות שמורות.</p>
+					</div>
+					<div class="col-md-6 text-md-start">
+						<div class="payment-methods">
+							<img
+								src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg"
+								alt="Payment methods"
+								height="25"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<div id="countdown" class="countdown-container">
+			⏳ הזמן אוזל! מבצע מיוחד מסתיים בעוד: <span id="timer"></span>
+		</div>
+
+		<script src="https://js.stripe.com/v3/"></script>
+		<script src="../payment.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="../js/main.js"></script>
+		<script src="../js/packages.js"></script>
+	</body>
+</html>
+>>>>>>> parent of 4018b29 (updated blog page + gallery)
