@@ -1,36 +1,27 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//     updateVideoLoop();
-// });
+function scrollToActivities() {
+	document.getElementById("activities").scrollIntoView({ behavior: "smooth" });
+}
 
-// const videos = [
-//     "https://res.cloudinary.com/dora8sxcb/video/upload/v1739794956/hhh_jeih69.mp4",
-//     "https://res.cloudinary.com/dora8sxcb/video/upload/v1739795032/kkk_j42asq.mp4",
-//     "https://res.cloudinary.com/dora8sxcb/video/upload/v1739723154/kobiVideo_ldmi69.mp4"
-// ];
+const videos = ["images/kobiVideo.mp4", "images/kkk.mp4", "images/hhh.mp4"];
 
-// let currentVideoIndex = 0;
+// מחשבים איזה סרטון להציג כל 10 שעות
+function getVideoIndex() {
+	const currentTime = new Date().getTime();
+	const timeSlot = Math.floor(currentTime / (15 * 60 * 1000)); // מחלקים לזמן של 10 שעות
+	return timeSlot % videos.length; // מחזוריות לפי מספר הסרטונים
+}
 
-// function updateVideoLoop() {
-//     const videoElement = document.getElementById("videoPlayer");
-//     const sourceElement = document.getElementById("videoSource");
+// שינוי הסרטון בהתאם לזמן
+function updateVideo() {
+	const videoElement = document.getElementById("headerVideo");
+	const sourceElement = document.getElementById("videoSource");
 
-//     if (!videoElement || !sourceElement) {
-//         console.error("לא נמצא אלמנט הווידאו או המקור.");
-//         return;
-//     }
-
-//     videoElement.addEventListener("ended", function () {
-//         // מעבר לסרטון הבא בלולאה
-//         currentVideoIndex = (currentVideoIndex + 1) % videos.length;
-//         sourceElement.src = videos[currentVideoIndex];
-//         videoElement.load();
-//         videoElement.play();
-//     });
-
-//     // הפעלה ראשונית
-//     videoElement.play();
-// }
-
+	if (videoElement && sourceElement) {
+		const newVideo = videos[getVideoIndex()];
+		sourceElement.src = newVideo;
+		videoElement.load(); // טוען את הווידאו מחדש
+	}
+}
 document.addEventListener("DOMContentLoaded", function () {
 	// יצירת אלמנט הקונטיינר הצף לנגישות
 	const accessibilityContainer = document.createElement("div");
@@ -130,6 +121,7 @@ setInterval(updateCountdown, 1000);
 function showPhoneNumber() {
 	const phoneNumber = document.getElementById("phone-number");
 	phoneNumber.style.display = "block"; // נחשוף את המספר אחרי לחיצה
+<<<<<<< HEAD
 }
 document.addEventListener("DOMContentLoaded", function () {
 	const videoPlayer = document.getElementById("videoPlayer");
@@ -193,3 +185,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	});
 });
+=======
+} 
+>>>>>>> parent of 3d03e57 (Merge branch 'main' of https://github.com/relaya17/actionsInTheDesert)
