@@ -74,67 +74,6 @@
 		<!-- Gallery CSS -->
 		<link rel="stylesheet" href="../styles/gallery.css" />
 
-		<!-- Custom Gallery Styles -->
-		<style>
-			.selected-image-container {
-				position: relative;
-				width: 100%;
-				padding-top: 100%; /* Create a 1:1 aspect ratio (perfect square) */
-				margin-bottom: 20px;
-				overflow: hidden;
-				border-radius: 8px;
-				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-			}
-
-			.selected-image {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				transition: all 0.3s ease;
-			}
-
-			.thumbnails-container {
-				padding: 10px 0;
-				width: 100%;
-			}
-
-			.thumb-wrapper {
-				position: relative;
-				width: 100%;
-				padding-top: 100%; /* Creates a perfect square */
-				margin-bottom: 15px;
-				overflow: hidden;
-				border-radius: 4px;
-			}
-
-			.gallery-thumb {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				cursor: pointer;
-				transition: all 0.2s ease;
-				opacity: 0.8;
-				border: 3px solid transparent;
-			}
-
-			.gallery-thumb:hover {
-				opacity: 1;
-				transform: scale(1.05);
-			}
-
-			.gallery-thumb.active {
-				opacity: 1;
-				border-color: #0d6efd;
-				transform: scale(1.05);
-			}
-		</style>
-
 		<!-- Lottie Animation -->
 		<script src="https://cdn.jsdelivr.net/npm/lottie-web@5.7.5/build/player/lottie.min.js"></script>
 	</head>
@@ -177,7 +116,7 @@
 							>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="blog.html"
+							<a class="nav-link" href="../blog/blog.html"
 								><i class="fas fa-newspaper"></i> בלוג</a
 							>
 						</li>
@@ -214,7 +153,7 @@
 		</div>
 
 		<!-- Main Gallery Content -->
-		<div class="container-fluid py-5">
+		<div class="container py-5">
 			<!-- Introduction Text -->
 			<div class="row mb-5">
 				<div class="col-lg-8 mx-auto text-center">
@@ -231,135 +170,110 @@
 			<!-- Main Carousel Gallery -->
 			<section id="image-gallery" class="mb-5">
 				<h3 class="text-center mb-4">גלריית תמונות מרכזית</h3>
-
-				<!-- Main Selected Image Display -->
-				<div class="row justify-content-center mb-4">
-					<div class="col-md-8 col-lg-6">
-						<div class="selected-image-container">
+				<div
+					id="carouselExampleAutoplaying"
+					class="carousel slide"
+					data-bs-ride="carousel"
+					data-bs-interval="2000"
+				>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
 							<img
-								id="selected-image"
 								src="../images/favicon.ico"
-								class="img-fluid w-100 selected-image"
-								alt="תמונה נבחרת"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="Image bbb"
 							/>
 						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/blou.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="Image bbb"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/haruds.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="haruds"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/sky.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="sky 3"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/image10.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="Image 10"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/pic.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="pic 3"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/image2.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="Image 2"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/kobi82.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="Image 2"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/kobi98.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="Image 2"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/kobi93.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="Image 2"
+							/>
+						</div>
+						<div class="carousel-item">
+							<img
+								src="../images/kobi44.png"
+								class="d-block w-100 h-100 object-fit-cover"
+								alt="Image 2"
+							/>
+						</div>
+						<!-- הוסף עוד תמונות אם תרצה -->
 					</div>
-				</div>
-
-				<!-- Thumbnails Gallery -->
-				<div class="thumbnails-container">
-					<div class="row g-3">
-						<div class="col-6 col-md-3 col-lg-2">
-							<div class="thumb-wrapper">
-								<img
-									src="../images/favicon.ico"
-									class="gallery-thumb active"
-									alt="Image 1"
-									onclick="selectImage(this, '../images/favicon.ico')"
-								/>
-							</div>
-						</div>
-						<div class="col-6 col-md-3 col-lg-2">
-							<div class="thumb-wrapper">
-								<img
-									src="../images/blou.png"
-									class="gallery-thumb"
-									alt="Image 2"
-									onclick="selectImage(this, '../images/blou.png')"
-								/>
-							</div>
-						</div>
-						<div class="col-6 col-md-3 col-lg-2">
-							<div class="thumb-wrapper">
-								<img
-									src="../images/haruds.png"
-									class="gallery-thumb"
-									alt="Image 3"
-									onclick="selectImage(this, '../images/haruds.png')"
-								/>
-							</div>
-						</div>
-						<div class="col-6 col-md-3 col-lg-2">
-							<div class="thumb-wrapper">
-								<img
-									src="../images/sky.png"
-									class="gallery-thumb"
-									alt="Image 4"
-									onclick="selectImage(this, '../images/sky.png')"
-								/>
-							</div>
-						</div>
-						<div class="col-6 col-md-3 col-lg-2">
-							<div class="thumb-wrapper">
-								<img
-									src="../images/image10.png"
-									class="gallery-thumb"
-									alt="Image 5"
-									onclick="selectImage(this, '../images/image10.png')"
-								/>
-							</div>
-						</div>
-						<div class="col-6 col-md-3 col-lg-2">
-							<div class="thumb-wrapper">
-								<img
-									src="../images/pic.png"
-									class="gallery-thumb"
-									alt="Image 6"
-									onclick="selectImage(this, '../images/pic.png')"
-								/>
-							</div>
-						</div>
-						<div class="col-6 col-md-3 col-lg-2">
-							<div class="thumb-wrapper">
-								<img
-									src="../images/image2.png"
-									class="gallery-thumb"
-									alt="Image 7"
-									onclick="selectImage(this, '../images/image2.png')"
-								/>
-							</div>
-						</div>
-						<div class="col-6 col-md-3 col-lg-2">
-							<div class="thumb-wrapper">
-								<img
-									src="../images/kobi82.png"
-									class="gallery-thumb"
-									alt="Image 8"
-									onclick="selectImage(this, '../images/kobi82.png')"
-								/>
-							</div>
-						</div>
-						<div class="col-6 col-md-3 col-lg-2">
-							<div class="thumb-wrapper">
-								<img
-									src="../images/kobi98.png"
-									class="gallery-thumb"
-									alt="Image 9"
-									onclick="selectImage(this, '../images/kobi98.png')"
-								/>
-							</div>
-						</div>
-						<div class="col-6 col-md-3 col-lg-2">
-							<div class="thumb-wrapper">
-								<img
-									src="../images/kobi93.png"
-									class="gallery-thumb"
-									alt="Image 10"
-									onclick="selectImage(this, '../images/kobi93.png')"
-								/>
-							</div>
-						</div>
-						<div class="col-6 col-md-3 col-lg-2">
-							<div class="thumb-wrapper">
-								<img
-									src="../images/kobi44.png"
-									class="gallery-thumb"
-									alt="Image 11"
-									onclick="selectImage(this, '../images/kobi44.png')"
-								/>
-							</div>
-						</div>
-					</div>
+					<button
+						class="carousel-control-prev"
+						type="button"
+						data-bs-target="#carouselExampleAutoplaying"
+						data-bs-slide="prev"
+					>
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#carouselExampleAutoplaying"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
 				</div>
 			</section>
 
@@ -594,7 +508,7 @@
 								>
 							</li>
 							<li>
-								<a href="blog.html"
+								<a href="../blog/blog.html"
 									><i class="fas fa-angle-left ms-1"></i> בלוג</a
 								>
 							</li>
@@ -708,29 +622,5 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 		<script src="../js/main.js"></script>
 		<script src="../js/packages.js"></script>
-
-		<!-- Gallery JavaScript -->
-		<script>
-			function selectImage(thumbnail, imageSrc) {
-				// Remove active class from all thumbnails
-				document.querySelectorAll(".gallery-thumb").forEach((thumb) => {
-					thumb.classList.remove("active");
-				});
-
-				// Add active class to clicked thumbnail
-				thumbnail.classList.add("active");
-
-				// Update the selected image
-				const selectedImage = document.getElementById("selected-image");
-
-				// Add a simple fade effect
-				selectedImage.style.opacity = "0";
-
-				setTimeout(() => {
-					selectedImage.src = imageSrc;
-					selectedImage.style.opacity = "1";
-				}, 200);
-			}
-		</script>
 	</body>
 </html>
