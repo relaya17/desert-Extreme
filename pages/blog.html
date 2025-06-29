@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="בלוג טיולי שטח ואקסטרים במדבר הישראלי" />
+		<title>בלוג - טיולי אקסטרים במדבר</title>
+
+		<!-- Bootstrap CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+
+		<!-- FontAwesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+
+		<!-- Custom CSS -->
+		<link rel="stylesheet" href="../styles/main.css" />
+		<link rel="stylesheet" href="../styles/blog.css" />
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav
+			class="navbar navbar-expand-lg navbar-light fixed-top modern-navbar sticky-top"
+		>
+			<div class="container-fluid px-0">
+				<a class="navbar-brand ms-3" href="../index.html">
+					<img
+						src="../assets/images/desert-adventure-logo.svg"
+						alt="אקשן במדבר"
+						class="site-logo"
+					/>
+				</a>
+				<button
+					class="navbar-toggler me-3"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav"
+				>
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a class="nav-link" href="../index.html"
+								><i class="fas fa-home"></i> דף הבית</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="../index.html#activities"
+								><i class="fas fa-hiking"></i> פעילויות</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="gallery.html"
+								><i class="fas fa-images"></i> גלריה</a
+							>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link active" href="blog.html"
+								><i class="fas fa-newspaper"></i> בלוג</a
+							>
+						</li>
+					</ul>
+					<div class="navbar-contact d-none d-lg-flex align-items-center me-3">
+						<a href="tel:0533919193" class="text-white me-3"
+							><i class="fas fa-phone-alt"></i> 053-391-9193</a
+						>
+					</div>
+					<a
+						href="../index.html#payment"
+						class="btn btn-warning nav-book-btn me-3"
+						><i class="fas fa-calendar-check"></i> הזמן עכשיו</a
+					>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Blog Header -->
+		<header class="blog-header text-center text-white">
+			<div class="container">
+				<h1 class="display-4 fw-bold">הבלוג של אקשן במדבר</h1>
+				<p class="lead">
+					טיפים, מסלולים ומידע על חוויות אקסטרים וטיולי שטח במדבר
+				</p>
+			</div>
+		</header>
+
+		<!-- Blog Filter Navbar -->
+		<div class="blog-filter-navbar py-3 bg-light border-bottom">
+			<div class="container">
+				<div class="row align-items-center">
+					<div class="col-lg-8 mb-3 mb-lg-0">
+						<nav class="filter-nav">
+							<ul class="nav nav-pills">
+								<li class="nav-item">
+									<a class="nav-link active" href="#">הכל</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">טיולי ג'יפים</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">טיפים לטיולים</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">פעילויות מדבר</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">מסלולי טיול</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">צילום במדבר</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<div class="col-lg-4">
+						<div class="input-group">
+							<input
+								type="text"
+								class="form-control"
+								placeholder="חיפוש בבלוג..."
+							/>
+							<button class="btn btn-primary" type="button">
+								<i class="fas fa-search"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Blog Content -->
+		<div class="blog-container py-5">
+			<div class="row">
+				<!-- Main Content -->
+				<div class="col-12">
+					<!-- Blog Post 1 -->
+					<div class="blog-card">
+						<img
+							src="../images/desert-trails.jpg"
+							class="card-img-top"
+							alt="מסלולי שטח במדבר"
+						/>
+						<div class="card-body">
+							<div class="blog-meta">
+								<span
+									><i class="far fa-calendar-alt me-1"></i> 15 ביוני, 2024</span
+								>
+								<span class="mx-2">|</span>
+								<span><i class="far fa-user me-1"></i> אבי דורון</span>
+								<span class="mx-2">|</span>
+								<span><i class="far fa-folder me-1"></i> טיולי ג'יפים</span>
+							</div>
+							<h3 class="blog-title" onclick="toggleBlogContent(this)">
+								5 המסלולים הכי שווים לטיול שטח במדבר
+							</h3>
+							<div class="blog-excerpt">
+								<p>
+									גלו את המסלולים המדהימים ביותר בדרום ישראל עם נופים בלתי
+									נשכחים. בין אם אתם חובבי אדרנלין או מחפשים חוויה רגועה, המדבר
+									מציע מגוון רחב של מסלולים...
+								</p>
+							</div>
+							<div class="blog-content">
+								<h4>1. מסלול דיונות החול של הנגב</h4>
+								<p>
+									מסלול מלא אתגרים בין דיונות רכות ונופים מדבריים מרהיבים.
+									הדיונות משתנות תדיר ברוח, מה שהופך כל ביקור לחוויה שונה
+									ומיוחדת. זהו אחד המקומות הטובים ביותר לצפות בזריחות ושקיעות
+									במדבר.
+								</p>
+
+								<h4>2. קניוני אבן החול בערבה</h4>
+								<p>
+									טיול ג'יפים אתגרי בין קניונים צרים וצוקים אדירים. המסלול מציע
+									מעברים צרים בין סלעי אבן חול צבעוניים ותצורות גיאולוגיות
+									מרהיבות שנוצרו לאורך מיליוני שנים.
+								</p>
+
+								<h4>3. הר כרכום - המסלול המיסטי</h4>
+								<p>
+									הר הקדוש עם נופים עוצרי נשימה ונקודות תצפית ייחודיות. רבים
+									מאמינים שזהו הר סיני המקראי, ובמקום ישנם ציורי סלע עתיקים
+									ומקומות בעלי חשיבות היסטורית.
+								</p>
+
+								<h4>4. נחל פארן - המסלול הארוך</h4>
+								<p>
+									מסלול מרהיב המתאים לחובבי שטח מנוסים. נחל פארן הוא הנחל הארוך
+									ביותר בנגב, והטיול בו מציע מגוון נופים מדבריים, החל ממצוקים
+									תלולים ועד בריכות מים טבעיות בעונות הגשומות.
+								</p>
+
+								<h4>5. שמורת תמנע - שילוב של טבע והיסטוריה</h4>
+								<p>
+									נופים מיוחדים ושרידים עתיקים בלב המדבר. בשמורה ניתן למצוא את
+									עמודי שלמה המפורסמים, מכרות נחושת עתיקים, ומגוון רחב של תצורות
+									סלע ייחודיות כמו "הפטרייה" ו"הקשת".
+								</p>
+
+								<div class="blog-comments mt-4">
+									<h5>תגובות (3)</h5>
+									<div class="comment">
+										<div class="comment-avatar">
+											<img src="../images/profile1.jpg" alt="משתמש" />
+										</div>
+										<div class="comment-content">
+											<div class="comment-author">יוסי כהן</div>
+											<div class="comment-date">17 ביוני, 2024</div>
+											<p>
+												תודה על הרשימה המעולה! הייתי בדיונות של הנגב לפני חודש
+												וזו באמת חוויה מדהימה.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button
+								class="btn btn-read mt-3"
+								onclick="toggleBlogContent(this.previousElementSibling.previousElementSibling)"
+							>
+								קרא עוד
+							</button>
+						</div>
+					</div>
+
+					<!-- Blog Post 2 -->
+					<div class="blog-card">
+						<img
+							src="../images/driving-tips.jpg"
+							class="card-img-top"
+							alt="נהיגת שטח בטוחה"
+						/>
+						<div class="card-body">
+							<div class="blog-meta">
+								<span
+									><i class="far fa-calendar-alt me-1"></i> 8 ביוני, 2024</span
+								>
+								<span class="mx-2">|</span>
+								<span><i class="far fa-user me-1"></i> שירה לוי</span>
+								<span class="mx-2">|</span>
+								<span><i class="far fa-folder me-1"></i> טיפים לטיולים</span>
+							</div>
+							<h3 class="blog-title" onclick="toggleBlogContent(this)">
+								איך לנהוג בבטחה בשטח? 7 טיפים חשובים
+							</h3>
+							<div class="blog-excerpt">
+								<p>
+									נהיגת שטח היא מיומנות שדורשת ידע וניסיון. למדו איך להתמודד עם
+									דיונות, דרכי חצץ ושיפועים תלולים בבטחה...
+								</p>
+							</div>
+							<div class="blog-content">
+								<h4>1. תכננו את המסלול מראש</h4>
+								<p>
+									בדקו את תנאי הדרך, מזג האוויר, ומקומות עצירה אפשריים כדי
+									להימנע מהפתעות. תמיד עדכנו מישהו לגבי המסלול המתוכנן שלכם ומתי
+									אתם מצפים לחזור.
+								</p>
+
+								<h4>2. השתמשו בצמיגים המתאימים</h4>
+								<p>
+									צמיגים המותאמים לשטח ישפרו את האחיזה והשליטה בנסיעה. ודאו שהם
+									מנופחים ללחץ האוויר המתאים לנהיגת שטח, שהוא בדרך כלל נמוך יותר
+									מנהיגה רגילה.
+								</p>
+
+								<h4>3. שמרו על מהירות מתאימה</h4>
+								<p>
+									נהיגה מהירה מדי יכולה לגרום לאובדן שליטה, במיוחד על דרכי חצץ
+									וחול. התאימו את המהירות לתנאי השטח וזכרו שלפעמים לאט זה בטוח
+									יותר.
+								</p>
+
+								<h4>4. ודאו שאתם מצוידים נכון</h4>
+								<p>
+									תמיד קחו אתכם מים, כלי חילוץ, משאבת אוויר וערכת עזרה ראשונה.
+									במקרה של תקלה, ציוד נכון עשוי להיות ההבדל בין אי נוחות קלה
+									לבין מצב חירום.
+								</p>
+
+								<h4>5. השתמשו בהנעה 4x4 כראוי</h4>
+								<p>
+									למדו מתי ואיך להפעיל 4x4 כדי לעבור מכשולים בקלות. הנעה כפולה
+									נמוכה מתאימה לעליות תלולות ושטח קשה, בעוד הנעה כפולה גבוהה
+									מתאימה לדרכי עפר וחצץ.
+								</p>
+
+								<h4>6. שמרו על מרחק בטוח משאר הרכבים</h4>
+								<p>
+									בשטח, מרחקי בלימה משתנים ויש להימנע מהתקרבות מסוכנת לרכב אחר.
+									בנוסף, מרחק גדול יותר מפחית את כמות האבק והחצץ שמגיעים לרכב
+									שלכם.
+								</p>
+
+								<h4>7. היו מוכנים למצבי חירום</h4>
+								<p>
+									הכירו את האזור, ודאו קליטה סלולרית, ולמדו איך להתמודד עם תקלות
+									מכניות. ידע בסיסי בתיקוני רכב יכול לחסוך לכם המון צרות בשטח.
+								</p>
+
+								<div class="blog-comments mt-4">
+									<h5>תגובות (2)</h5>
+									<div class="comment">
+										<div class="comment-avatar">
+											<img src="../images/profile2.jpg" alt="משתמש" />
+										</div>
+										<div class="comment-content">
+											<div class="comment-author">דני אלון</div>
+											<div class="comment-date">10 ביוני, 2024</div>
+											<p>
+												טיפים מעולים! הייתי מוסיף גם לבדוק את מערכת הקירור לפני
+												יציאה לשטח במזג אוויר חם.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button
+								class="btn btn-read mt-3"
+								onclick="toggleBlogContent(this.previousElementSibling.previousElementSibling)"
+							>
+								קרא עוד
+							</button>
+						</div>
+					</div>
+
+					<!-- Blog Post 3 -->
+					<div class="blog-card">
+						<img
+							src="../images/horseback-riding.jpg"
+							class="card-img-top"
+							alt="רכיבה על סוס במדבר"
+						/>
+						<div class="card-body">
+							<div class="blog-meta">
+								<span
+									><i class="far fa-calendar-alt me-1"></i> 1 ביוני, 2024</span
+								>
+								<span class="mx-2">|</span>
+								<span><i class="far fa-user me-1"></i> מיכל ברק</span>
+								<span class="mx-2">|</span>
+								<span><i class="far fa-folder me-1"></i> פעילויות מדבר</span>
+							</div>
+							<h3 class="blog-title" onclick="toggleBlogContent(this)">
+								רכיבה על סוס במדבר: חוויות בלתי נשכחות
+							</h3>
+							<div class="blog-excerpt">
+								<p>
+									גלה את היתרונות והחוויות של רכיבה על סוס בשטח הפתוח של המדבר.
+									חוויה שתישאר איתך לנצח...
+								</p>
+							</div>
+							<div class="blog-content">
+								<p>
+									רכיבה על סוס במדבר היא חוויה קסומה המשלבת את המראה המרהיב של
+									המדבר האדום עם שקט טבעי שמעטים יכולים לחוות. אילת מציעה
+									מסלולים מתאימים לרכיבה על סוס, עם נופים עוצרי נשימה של חופי ים
+									סוף וההרים שמסביב.
+								</p>
+
+								<h4>מה כדאי לדעת לפני רכיבה על סוס במדבר?</h4>
+								<ul>
+									<li>
+										בקרו במרכזי רכיבה מוסמכים ומנוסים שמציעים סוסים מטופלים
+										היטב.
+									</li>
+									<li>
+										הצטיידו במים וקרם הגנה – המדבר יכול להיות חם מאוד, במיוחד
+										בקיץ.
+									</li>
+									<li>
+										תמיד רכבו עם מדריך מוסמך שמכיר את המסלול ומספק הנחיות
+										בטיחות.
+									</li>
+								</ul>
+
+								<h4>המסלולים המומלצים לרכיבה על סוס באילת</h4>
+								<p>
+									באילת קיימים מסלולי רכיבה מרהיבים שמתאימים לכל הרמות, ממתחילים
+									ועד רכיבה מתקדמת:
+								</p>
+								<ul>
+									<li>
+										<strong>המסלול לאורך חופי אילת</strong> – מסלול רגוע לצד
+										חופי ים סוף המציע נוף מהמם.
+									</li>
+									<li>
+										<strong>המסלול במדבר האדום</strong> – חוויית רכיבה אקסטרימית
+										עם נופים דרמטיים של הרי אילת והמדבר.
+									</li>
+									<li>
+										<strong>המסלול בהר צפחות</strong> – מסלול מאתגר עם נופים
+										פנורמיים מרהיבים של האזור.
+									</li>
+								</ul>
+
+								<p>
+									אם אתם מחפשים חוויה שתשאיר אתכם עם זיכרונות בלתי נשכחים, רכיבה
+									על סוס באילת היא הבחירה המושלמת. אל תשכחו לתעד את הרגעים
+									המיוחדים ולהשאיר את החוויות בלבכם!
+								</p>
+
+								<div class="blog-comments mt-4">
+									<h5>תגובות (1)</h5>
+									<div class="comment">
+										<div class="comment-avatar">
+											<img src="../images/profile3.jpg" alt="משתמש" />
+										</div>
+										<div class="comment-content">
+											<div class="comment-author">נועה גלעד</div>
+											<div class="comment-date">3 ביוני, 2024</div>
+											<p>
+												ניסיתי את המסלול במדבר האדום בחודש שעבר והיה פשוט מדהים!
+												ממליצה בחום.
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<button
+								class="btn btn-read mt-3"
+								onclick="toggleBlogContent(this.previousElementSibling.previousElementSibling)"
+							>
+								קרא עוד
+							</button>
+						</div>
+					</div>
+
+					<!-- Pagination -->
+					<nav aria-label="Page navigation" class="my-4">
+						<ul class="pagination justify-content-center">
+							<li class="page-item disabled">
+								<a class="page-link" href="#" tabindex="-1" aria-disabled="true"
+									>הקודם</a
+								>
+							</li>
+							<li class="page-item active">
+								<a class="page-link" href="#">1</a>
+							</li>
+							<li class="page-item"><a class="page-link" href="#">2</a></li>
+							<li class="page-item"><a class="page-link" href="#">3</a></li>
+							<li class="page-item">
+								<a class="page-link" href="#">הבא</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<footer class="footer py-5" dir="rtl">
+			<div class="container">
+				<div class="row">
+					<!-- Company Info -->
+					<div class="col-lg-4 pb-4">
+						<div class="text-lg-end pb-3">
+							<img
+								src="../assets/images/desert-adventure-logo.svg"
+								alt="אקשן במדבר"
+								class="site-logo"
+							/>
+						</div>
+						<h4 class="pb-4 text-end">אקשן במדבר</h4>
+						<p class="text-end">
+							חברת טיולים המתמחה בחוויות אקסטרים במדבר. מספקים שירותי תיירות
+							אדרנלין באיכות גבוהה מאז 2010.
+						</p>
+						<div class="contact-info pt-3 text-end">
+							<p><i class="fas fa-map-marker-alt ps-2"></i> אילת, ישראל</p>
+							<p>
+								<i class="fas fa-phone ps-2"></i>
+								<a href="tel:0533919193">053-391-9193</a>
+							</p>
+							<p>
+								<i class="fas fa-envelope ps-2"></i>
+								<a href="mailto:contact@desertextreme.com"
+									>contact@desertextreme.com</a
+								>
+							</p>
+						</div>
+					</div>
+
+					<!-- Quick Links -->
+					<div class="col-lg-2 col-md-6 pb-4">
+						<h5 class="pb-3 text-end">קישורים מהירים</h5>
+						<ul class="footer-links text-end list-unstyled">
+							<li>
+								<a href="../index.html"
+									><i class="fas fa-angle-left ps-1"></i> דף הבית</a
+								>
+							</li>
+							<li>
+								<a href="../index.html#activities"
+									><i class="fas fa-angle-left ps-1"></i> פעילויות</a
+								>
+							</li>
+							<li>
+								<a href="../index.html#payment"
+									><i class="fas fa-angle-left ps-1"></i> הזמנה</a
+								>
+							</li>
+							<li>
+								<a href="blog.html"
+									><i class="fas fa-angle-left ps-1"></i> בלוג</a
+								>
+							</li>
+							<li>
+								<a href="gallery.html"
+									><i class="fas fa-angle-left ps-1"></i> גלריה</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Activities -->
+					<div class="col-lg-2 col-md-6 pb-4">
+						<h5 class="pb-3 text-end">פעילויות</h5>
+						<ul class="footer-links text-end list-unstyled">
+							<li>
+								<a href="../index.html#payment"
+									><i class="fas fa-angle-left ps-1"></i> טיולי ג'יפים</a
+								>
+							</li>
+							<li>
+								<a href="../index.html#payment"
+									><i class="fas fa-angle-left ps-1"></i> רכיבת שטח</a
+								>
+							</li>
+							<li>
+								<a href="../index.html#payment"
+									><i class="fas fa-angle-left ps-1"></i> טיולי רייזר</a
+								>
+							</li>
+							<li>
+								<a href="../index.html#payment"
+									><i class="fas fa-angle-left ps-1"></i> טיולי טרקטורונים</a
+								>
+							</li>
+							<li>
+								<a href="../index.html#payment"
+									><i class="fas fa-angle-left ps-1"></i> חבילות משפחתיות</a
+								>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Contact Form -->
+					<div class="col-lg-4 pb-4">
+						<h5 class="pb-3 text-end">יצירת קשר מהירה</h5>
+						<form class="footer-form text-end">
+							<div class="pb-3">
+								<input
+									type="text"
+									class="form-control text-end"
+									placeholder="שם מלא"
+									required
+								/>
+							</div>
+							<div class="pb-3">
+								<input
+									type="email"
+									class="form-control text-end"
+									placeholder="אימייל"
+									required
+								/>
+							</div>
+							<div class="pb-3">
+								<input
+									type="tel"
+									class="form-control text-end"
+									placeholder="טלפון"
+									required
+								/>
+							</div>
+							<div class="pb-3">
+								<textarea
+									class="form-control text-end"
+									rows="3"
+									placeholder="הודעה"
+									required
+								></textarea>
+							</div>
+							<button type="submit" class="btn btn-primary">שלח הודעה</button>
+						</form>
+					</div>
+				</div>
+
+				<hr class="py-4" />
+
+				<!-- Bottom Footer -->
+				<div class="row align-items-center">
+					<div class="col-md-6 text-md-end">
+						<p class="pb-0">&copy; 2024 אקשן במדבר. כל הזכויות שמורות.</p>
+					</div>
+					<div class="col-md-6 text-md-start">
+						<div class="payment-methods">
+							<img
+								src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg"
+								alt="Payment methods"
+								height="25"
+							/>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<div id="countdown" class="countdown-container">
+			⏳ הזמן אוזל! מבצע מיוחד מסתיים בעוד: <span id="timer"></span>
+		</div>
+
+		<!-- Scripts -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Blog Functionality Script -->
+		<script>
+			function toggleBlogContent(element) {
+				// Find the parent blog card
+				const blogCard = element.closest(".blog-card");
+				// Find the content div
+				const content = blogCard.querySelector(".blog-content");
+				// Toggle active class
+				content.classList.toggle("active");
+				// Update button text
+				const button = blogCard.querySelector(".btn-read");
+				if (content.classList.contains("active")) {
+					button.textContent = "סגור מאמר";
+				} else {
+					button.textContent = "קרא עוד";
+				}
+			}
+		</script>
+	</body>
+</html>
