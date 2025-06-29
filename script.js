@@ -122,6 +122,7 @@ function showPhoneNumber() {
 	const phoneNumber = document.getElementById("phone-number");
 	phoneNumber.style.display = "block"; // נחשוף את המספר אחרי לחיצה
 <<<<<<< HEAD
+<<<<<<< HEAD
 }
 document.addEventListener("DOMContentLoaded", function () {
 	const videoPlayer = document.getElementById("videoPlayer");
@@ -185,6 +186,9 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 	});
 });
+=======
+} 
+>>>>>>> parent of 3d03e57 (Merge branch 'main' of https://github.com/relaya17/actionsInTheDesert)
 =======
 } 
 >>>>>>> parent of 3d03e57 (Merge branch 'main' of https://github.com/relaya17/actionsInTheDesert)
