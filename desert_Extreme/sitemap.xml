@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <!-- Main Pages -->
+    <url>
+        <loc>https://actionsinthdesert.netlify.app/</loc>
+        <lastmod>2024-01-31</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="he" href="https://actionsinthdesert.netlify.app/index.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://actionsinthdesert.netlify.app/locales/en/index.html"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://actionsinthdesert.netlify.app/locales/ru/index-ru.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://actionsinthdesert.netlify.app/locales/fr/index-fr.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://actionsinthdesert.netlify.app/locales/ar/index-ar.html"/>
+        <image:image>
+            <image:loc>https://actionsinthdesert.netlify.app/assets/images/iconn.png</image:loc>
+            <image:caption>Desert Extreme - טיולי ג'יפים ואופנועים במדבר</image:caption>
+            <image:title>Desert Extreme Adventures</image:title>
+        </image:image>
+    </url>
+    
+    <!-- Hebrew Version -->
+    <url>
+        <loc>https://actionsinthdesert.netlify.app/index.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- English Version -->
+    <url>
+        <loc>https://actionsinthdesert.netlify.app/locales/en/index.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Russian Version -->
+    <url>
+        <loc>https://actionsinthdesert.netlify.app/locales/ru/index-ru.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- French Version -->
+    <url>
+        <loc>https://actionsinthdesert.netlify.app/locales/fr/index-fr.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Arabic Version -->
+    <url>
+        <loc>https://actionsinthdesert.netlify.app/locales/ar/index-ar.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Blog Pages -->
+    <url>
+        <loc>https://actionsinthdesert.netlify.app/blog/blog.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://actionsinthdesert.netlify.app/blog/blog-en.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://actionsinthdesert.netlify.app/blog/blog-preparation.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://actionsinthdesert.netlify.app/blog/blog-safety.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <url>
+        <loc>https://actionsinthdesert.netlify.app/blog/blog-techniques.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- Legal Pages -->
+    <url>
+        <loc>https://actionsinthdesert.netlify.app/pages/legal/terms.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://actionsinthdesert.netlify.app/pages/legal/privacy.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <url>
+        <loc>https://actionsinthdesert.netlify.app/pages/legal/copyright.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+    
+    <!-- Payment Pages -->
+    <url>
+        <loc>https://actionsinthdesert.netlify.app/pages/success.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+    <url>
+        <loc>https://actionsinthdesert.netlify.app/pages/cancel.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.4</priority>
+    </url>
+    
+</urlset>

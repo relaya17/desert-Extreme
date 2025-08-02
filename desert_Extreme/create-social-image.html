@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Create Social Media Image</title>
+    <style>
+        .social-card {
+            width: 1200px;
+            height: 630px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .content {
+            text-align: center;
+            color: white;
+            z-index: 2;
+            position: relative;
+        }
+
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto 30px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+        }
+
+        .title {
+            font-size: 60px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 32px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .phone {
+            font-size: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px 30px;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        .shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .shape {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .shape1 {
+            width: 200px;
+            height: 200px;
+            top: 50px;
+            right: 100px;
+        }
+
+        .shape2 {
+            width: 150px;
+            height: 150px;
+            bottom: 100px;
+            left: 150px;
+        }
+
+        .shape3 {
+            width: 100px;
+            height: 100px;
+            top: 200px;
+            left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="social-card">
+        <div class="shapes">
+            <div class="shape shape1"></div>
+            <div class="shape shape2"></div>
+            <div class="shape shape3"></div>
+        </div>
+
+        <div class="content">
+            <div class="logo">🏜️</div>
+            <h1 class="title">Desert Extreme</h1>
+            <p class="subtitle">טיולי ג'יפים ואופנועים במדבר</p>
+            <div class="phone">📞 053-3919193</div>
+        </div>
+    </div>
+
+    <script>
+        // Instructions for creating the image:
+        console.log(`
+To create the social media image:
+1. Take a screenshot of the card above
+2. Save it as social-image.png (1200x630)
+3. Place it in assets/images/ folder
+4. Update meta tags to use this image
+        `);
+    </script>
+</body>
+
+</html>
