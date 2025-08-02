@@ -1,0 +1,38 @@
+User-agent: *
+Allow: /
+
+# Allow access to main pages
+Allow: /index.html
+Allow: /locales/
+Allow: /blog/
+Allow: /pages/
+Allow: /assets/
+
+# Disallow sensitive directories
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /node_modules/
+Disallow: /*.log
+Disallow: /*.env
+
+# Allow CSS and JS for proper rendering
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+
+# Sitemap location
+Sitemap: https://actionsinthdesert.netlify.app/sitemap.xml
+
+# Crawl delay (polite crawling)
+Crawl-delay: 1
+
+# Special instructions for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Instructions for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1

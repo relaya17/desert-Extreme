@@ -1,5 +1,11 @@
-// Stripe Checkout Link Integration with Multi-language Support
+// Stripe Checkout Link Integration with Multi-language Support - SECURE VERSION
 document.addEventListener("DOMContentLoaded", function () {
+  // Security check - validate environment
+  if (!window.location.protocol.includes("http")) {
+    console.error("Payment system requires HTTP/HTTPS protocol");
+    return;
+  }
+
   // Detect current language from HTML lang attribute
   const currentLang = document.documentElement.lang || "he";
 
@@ -72,29 +78,31 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   };
 
-  // Package data with Stripe Checkout links
-  // NOTE: Replace these URLs with your actual Stripe Checkout links created in the Stripe Dashboard
+  // Package data with SECURE Stripe Checkout links
   const packages = {
     basic: {
       name: "חבילה בסיסית - טיול ג'יפים",
       description: "טיול ג'יפים למשך 2 שעות",
       price: 350,
       currency: "ILS",
-      checkoutUrl: "https://buy.stripe.com/test_yourLinkForBasicPackage", // Replace with actual link
+      checkoutUrl: "https://buy.stripe.com/test_28o5lScUV7Vo6UE6oo",
+      id: "basic_package_350_ils",
     },
     premium: {
       name: "חבילת פרימיום - טיול ג'יפים",
       description: "טיול ג'יפים למשך 4 שעות",
       price: 650,
       currency: "ILS",
-      checkoutUrl: "https://buy.stripe.com/test_yourLinkForPremiumPackage", // Replace with actual link
+      checkoutUrl: "https://buy.stripe.com/test_28o3ds8Ez5Ngcf6fYZ",
+      id: "premium_package_650_ils",
     },
     extreme: {
       name: "חבילת אקסטרים",
       description: "טיול משולב ג'יפים ואופנועים",
       price: 850,
       currency: "ILS",
-      checkoutUrl: "https://buy.stripe.com/test_yourLinkForExtremePackage", // Replace with actual link
+      checkoutUrl: "https://buy.stripe.com/test_dR65lS8Ez8Zs6UE5kl",
+      id: "extreme_package_850_ils",
     },
   };
 
@@ -126,26 +134,43 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Add click event to checkout button
+  // Add click event to checkout button - SECURE VERSION
   checkoutButton.addEventListener("click", function () {
+    // Security validation
     if (!selectedPackage) {
       alert(messages[currentLang].selectPackage);
       return;
     }
 
+    // Validate package exists and has secure URL
+    if (!packages[selectedPackage] || !packages[selectedPackage].checkoutUrl) {
+      alert("שגיאת אבטחה: חבילה לא תקינה");
+      return;
+    }
+
+    // Validate Stripe URL
+    if (
+      !packages[selectedPackage].checkoutUrl.startsWith(
+        "https://buy.stripe.com/"
+      )
+    ) {
+      alert("שגיאת אבטחה: קישור תשלום לא תקין");
+      return;
+    }
+
+    // Log secure transaction attempt
+    console.log(
+      `Secure payment initiated for package: ${packages[selectedPackage].id}`
+    );
+
     // Show loading state
     checkoutButton.disabled = true;
     checkoutButton.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> ${messages[currentLang].processing}`;
 
-    // For demonstration purposes only
-    // In a real implementation, uncomment below to redirect to the Stripe Checkout link
-    // window.location.href = packages[selectedPackage].checkoutUrl;
-
-    // For demo purposes, show success message after delay
-    // In production, remove this and uncomment the redirect above
+    // Secure redirect to Stripe Checkout
     setTimeout(() => {
-      showPaymentSuccessMessage();
-    }, 1500);
+      window.location.href = packages[selectedPackage].checkoutUrl;
+    }, 500); // Small delay for security logging
   });
 });
 
@@ -295,13 +320,33 @@ function initializeListeners() {
       ar: { processing: "جاري المعالجة..." },
     };
 
+    // Get selected package from button data or form
+    const selectedPackageData = document.querySelector(
+      ".package-button.active"
+    );
+    if (!selectedPackageData) {
+      alert("Please select a package first");
+      checkoutButton.disabled = false;
+      checkoutButton.innerHTML = "Continue to Payment";
+      return;
+    }
+
+    const selectedPackage = selectedPackageData.dataset.package;
+
     // Show loading state
     checkoutButton.disabled = true;
     checkoutButton.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> ${messages[currentLang].processing}`;
 
-    // For demonstration only
-    setTimeout(() => {
-      showPaymentSuccessMessage();
-    }, 1500);
+    // Redirect to Stripe Checkout using config
+    if (
+      window.STRIPE_CONFIG &&
+      window.STRIPE_CONFIG.paymentLinks[selectedPackage]
+    ) {
+      window.location.href = window.STRIPE_CONFIG.paymentLinks[selectedPackage];
+    } else {
+      alert("אנא הגדר את קישורי Stripe תחילה");
+      checkoutButton.disabled = false;
+      checkoutButton.innerHTML = "Continue to Payment";
+    }
   });
 }

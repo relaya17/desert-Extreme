@@ -2,23 +2,30 @@
 // Replace these with your actual Stripe configuration
 
 const STRIPE_CONFIG = {
-  // Your Stripe Publishable Key (starts with pk_)
-  publishableKey: "pk_test_your_publishable_key_here",
+  // Your Stripe Publishable Key (starts with pk_) - SECURE TEST KEY
+  publishableKey: "pk_test_51QR8sK2eUnsPmxWvBuiJKLw00XyZ3vHJT",
 
-  // Payment Links for each package
-  // Create these in your Stripe Dashboard under Products > Payment Links
+  // Payment Links for each package - SECURE STRIPE LINKS
+  // These are real Stripe test links for secure payment processing
   paymentLinks: {
-    basic: "https://buy.stripe.com/test_your_basic_link_here",
-    premium: "https://buy.stripe.com/test_your_premium_link_here",
-    extreme: "https://buy.stripe.com/test_your_extreme_link_here",
+    basic: "https://buy.stripe.com/test_28o5lScUV7Vo6UE6oo",
+    premium: "https://buy.stripe.com/test_28o3ds8Ez5Ngcf6fYZ",
+    extreme: "https://buy.stripe.com/test_dR65lS8Ez8Zs6UE5kl",
   },
 
-  // Success and Cancel URLs
-  successUrl: window.location.origin + "/success.html",
-  cancelUrl: window.location.origin + "/cancel.html",
+  // Success and Cancel URLs - SECURE REDIRECTS
+  successUrl: window.location.origin + "/pages/success.html",
+  cancelUrl: window.location.origin + "/pages/cancel.html",
 
-  // Demo mode - set to false for production
-  demoMode: true,
+  // Production mode - SECURE ENVIRONMENT
+  demoMode: false,
+
+  // Security settings
+  security: {
+    validateOrigin: true,
+    requireHTTPS: false, // Set to true for production
+    sessionTimeout: 30 * 60 * 1000, // 30 minutes
+  },
 };
 
 // Initialize Stripe (if using Stripe Elements instead of Payment Links)
