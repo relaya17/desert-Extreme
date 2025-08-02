@@ -284,69 +284,8 @@ function resetPaymentForm() {
   }
 }
 
-// Initialize event listeners
+// Initialize event listeners - REMOVED DUPLICATE CODE
+// This function is kept for compatibility but the main event listeners are in DOMContentLoaded
 function initializeListeners() {
-  const packageButtons = document.querySelectorAll(".package-button");
-  const checkoutButton = document.getElementById("checkout-button");
-
-  // Add click event to package buttons
-  packageButtons.forEach((button) => {
-    button.addEventListener("click", function () {
-      // Remove active class from all buttons
-      packageButtons.forEach((btn) => {
-        btn.classList.remove("active", "btn-primary");
-        btn.classList.add("btn-outline-light");
-      });
-
-      // Add active class to clicked button
-      this.classList.add("active", "btn-primary");
-      this.classList.remove("btn-outline-light");
-
-      // Enable checkout button
-      checkoutButton.disabled = false;
-    });
-  });
-
-  // Add click event to checkout button
-  checkoutButton.addEventListener("click", function () {
-    if (checkoutButton.disabled) return;
-
-    const currentLang = document.documentElement.lang || "he";
-    const messages = {
-      he: { processing: "מעבד..." },
-      en: { processing: "Processing..." },
-      ru: { processing: "Обработка..." },
-      fr: { processing: "Traitement..." },
-      ar: { processing: "جاري المعالجة..." },
-    };
-
-    // Get selected package from button data or form
-    const selectedPackageData = document.querySelector(
-      ".package-button.active"
-    );
-    if (!selectedPackageData) {
-      alert("Please select a package first");
-      checkoutButton.disabled = false;
-      checkoutButton.innerHTML = "Continue to Payment";
-      return;
-    }
-
-    const selectedPackage = selectedPackageData.dataset.package;
-
-    // Show loading state
-    checkoutButton.disabled = true;
-    checkoutButton.innerHTML = `<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> ${messages[currentLang].processing}`;
-
-    // Redirect to Stripe Checkout using config
-    if (
-      window.STRIPE_CONFIG &&
-      window.STRIPE_CONFIG.paymentLinks[selectedPackage]
-    ) {
-      window.location.href = window.STRIPE_CONFIG.paymentLinks[selectedPackage];
-    } else {
-      alert("אנא הגדר את קישורי Stripe תחילה");
-      checkoutButton.disabled = false;
-      checkoutButton.innerHTML = "Continue to Payment";
-    }
-  });
+  console.log("Event listeners already initialized in DOMContentLoaded");
 }

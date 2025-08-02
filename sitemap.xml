@@ -11,9 +11,9 @@
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="he" href="https://actionsinthdesert.netlify.app/index.html"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://actionsinthdesert.netlify.app/locales/en/index.html"/>
-        <xhtml:link rel="alternate" hreflang="ru" href="https://actionsinthdesert.netlify.app/locales/ru/index-ru.html"/>
-        <xhtml:link rel="alternate" hreflang="fr" href="https://actionsinthdesert.netlify.app/locales/fr/index-fr.html"/>
-        <xhtml:link rel="alternate" hreflang="ar" href="https://actionsinthdesert.netlify.app/locales/ar/index-ar.html"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://actionsinthdesert.netlify.app/locales/ru/index.html"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://actionsinthdesert.netlify.app/locales/fr/index.html"/>
+        <xhtml:link rel="alternate" hreflang="ar" href="https://actionsinthdesert.netlify.app/locales/ar/index.html"/>
         <image:image>
             <image:loc>https://actionsinthdesert.netlify.app/assets/images/iconn.png</image:loc>
             <image:caption>Desert Extreme - טיולי ג'יפים ואופנועים במדבר</image:caption>
@@ -39,7 +39,7 @@
     
     <!-- Russian Version -->
     <url>
-        <loc>https://actionsinthdesert.netlify.app/locales/ru/index-ru.html</loc>
+        <loc>https://actionsinthdesert.netlify.app/locales/ru/index.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -47,7 +47,7 @@
     
     <!-- French Version -->
     <url>
-        <loc>https://actionsinthdesert.netlify.app/locales/fr/index-fr.html</loc>
+        <loc>https://actionsinthdesert.netlify.app/locales/fr/index.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -55,7 +55,7 @@
     
     <!-- Arabic Version -->
     <url>
-        <loc>https://actionsinthdesert.netlify.app/locales/ar/index-ar.html</loc>
+        <loc>https://actionsinthdesert.netlify.app/locales/ar/index.html</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>

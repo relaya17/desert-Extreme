@@ -1,0 +1,23 @@
+# Redirect root to Hebrew version
+/ /locales/he/index.html 200
+
+# Language redirects
+/en /locales/en/index.html 200
+/ru /locales/ru/index.html 200
+/fr /locales/fr/index.html 200
+/ar /locales/ar/index.html 200
+
+# Common redirects
+/home /locales/he/index.html 301
+/main /locales/he/index.html 301
+/contact /locales/he/index.html#contact 301
+/about /locales/he/index.html#about 301
+/packages /locales/he/index.html#packages 301
+/payment /locales/he/index.html#payment 301
+
+# 404 redirects
+/en/* /locales/en/404-en.html 404
+/ru/* /locales/ru/404-ru.html 404
+/fr/* /locales/fr/404-fr.html 404
+/ar/* /locales/ar/404-ar.html 404
+/* /404.html 404 
