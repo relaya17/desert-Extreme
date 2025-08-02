@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     
     <!-- Main Pages -->
     <url>
         <loc>https://actionsinthdesert.netlify.app/</loc>
-        <lastmod>2024-01-01</lastmod>
+        <lastmod>2024-01-31</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <xhtml:link rel="alternate" hreflang="he" href="https://actionsinthdesert.netlify.app/index.html"/>
@@ -13,6 +14,11 @@
         <xhtml:link rel="alternate" hreflang="ru" href="https://actionsinthdesert.netlify.app/locales/ru/index-ru.html"/>
         <xhtml:link rel="alternate" hreflang="fr" href="https://actionsinthdesert.netlify.app/locales/fr/index-fr.html"/>
         <xhtml:link rel="alternate" hreflang="ar" href="https://actionsinthdesert.netlify.app/locales/ar/index-ar.html"/>
+        <image:image>
+            <image:loc>https://res.cloudinary.com/dora8sxcb/image/upload/t_Profile/v1738507524/iconn.png_yiv4uy.webp</image:loc>
+            <image:caption>Desert Extreme - טיולי ג'יפים ואופנועים במדבר</image:caption>
+            <image:title>Desert Extreme Adventures</image:title>
+        </image:image>
     </url>
     
     <!-- Hebrew Version -->

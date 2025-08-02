@@ -1,0 +1,155 @@
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "TravelAgency",
+            "@id": "https://actionsinthdesert.netlify.app/#organization",
+            "name": "Desert Extreme",
+            "alternateName": [
+                "דזרט אקסטרים",
+                "Actions in the Desert"
+            ],
+            "description": "טיולי ג'יפים ואופנועים במדבר - הרפתקאות אקסטרימיות עם נופים עוצרי נשימה",
+            "url": "https://actionsinthdesert.netlify.app/",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://res.cloudinary.com/dora8sxcb/image/upload/t_Profile/v1738507524/iconn.png_yiv4uy.webp",
+                "width": 512,
+                "height": 512
+            },
+            "image": [
+                "https://res.cloudinary.com/dora8sxcb/image/upload/t_Profile/v1738507524/iconn.png_yiv4uy.webp"
+            ],
+            "telephone": "+972533919193",
+            "email": "contact@desertextreme.com",
+            "address": {
+                "@type": "PostalAddress",
+                "addressCountry": "IL",
+                "addressRegion": "Judean Desert"
+            },
+            "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "31.2461",
+                "longitude": "34.7915"
+            },
+            "areaServed": {
+                "@type": "Country",
+                "name": "Israel"
+            },
+            "priceRange": "₪₪-₪₪₪",
+            "openingHours": "Mo-Su 08:00-20:00",
+            "paymentAccepted": [
+                "Cash",
+                "Credit Card",
+                "Bank Transfer"
+            ],
+            "currenciesAccepted": "ILS",
+            "sameAs": [
+                "https://www.facebook.com/desertextreme",
+                "https://www.instagram.com/desertextreme",
+                "https://wa.me/972533919193"
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://actionsinthdesert.netlify.app/#website",
+            "url": "https://actionsinthdesert.netlify.app/",
+            "name": "Desert Extreme - טיולי מדבר אקסטרימיים",
+            "description": "אתר הזמנות לטיולי ג'יפים ואופנועים במדבר עם חוויות אקסטרימיות ונופים עוצרי נשימה",
+            "publisher": {
+                "@id": "https://actionsinthdesert.netlify.app/#organization"
+            },
+            "inLanguage": [
+                "he-IL",
+                "en-US",
+                "ru-RU",
+                "fr-FR",
+                "ar-SA"
+            ],
+            "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://actionsinthdesert.netlify.app/?s={search_term_string}",
+                "query-input": "required name=search_term_string"
+            }
+        },
+        {
+            "@type": "Service",
+            "@id": "https://actionsinthdesert.netlify.app/#service",
+            "name": "טיולי מדבר אקסטרימיים",
+            "alternateName": "Desert Extreme Tours",
+            "description": "טיולי ג'יפים ואופנועים במדבר יהודה עם מדריכים מנוסים וציוד מקצועי",
+            "provider": {
+                "@id": "https://actionsinthdesert.netlify.app/#organization"
+            },
+            "areaServed": {
+                "@type": "Country",
+                "name": "Israel"
+            },
+            "serviceType": "Adventure Tourism",
+            "category": [
+                "Desert Tours",
+                "Jeep Tours",
+                "Motorcycle Tours",
+                "Adventure Sports"
+            ],
+            "image": "https://res.cloudinary.com/dora8sxcb/image/upload/t_Profile/v1738507524/iconn.png_yiv4uy.webp",
+            "offers": [
+                {
+                    "@type": "Offer",
+                    "name": "חבילה בסיסית - טיול ג'יפים",
+                    "description": "טיול ג'יפים במדבר למשך 2 שעות עם מדריך מנוסה",
+                    "price": "350",
+                    "priceCurrency": "ILS",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-01-01",
+                    "priceValidUntil": "2024-12-31",
+                    "itemCondition": "https://schema.org/NewCondition",
+                    "category": "Jeep Tour"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "חבילת פרימיום - טיול ג'יפים",
+                    "description": "טיול ג'יפים מורחב במדבר למשך 4 שעות עם ארוחה",
+                    "price": "650",
+                    "priceCurrency": "ILS",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-01-01",
+                    "priceValidUntil": "2024-12-31",
+                    "itemCondition": "https://schema.org/NewCondition",
+                    "category": "Premium Jeep Tour"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "חבילת אקסטרים",
+                    "description": "טיול משולב ג'יפים ואופנועים עם חוויה אקסטרימית מלאה",
+                    "price": "850",
+                    "priceCurrency": "ILS",
+                    "availability": "https://schema.org/InStock",
+                    "validFrom": "2024-01-01",
+                    "priceValidUntil": "2024-12-31",
+                    "itemCondition": "https://schema.org/NewCondition",
+                    "category": "Extreme Adventure"
+                }
+            ]
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://actionsinthdesert.netlify.app/#webpage",
+            "url": "https://actionsinthdesert.netlify.app/",
+            "name": "Desert Extreme - דף הבית",
+            "description": "הזמינו עכשיו טיולי מדבר אקסטרימיים עם ג'יפים ואופנועים. מחירים מיוחדים לקבוצות. התקשרו: 053-3919193",
+            "isPartOf": {
+                "@id": "https://actionsinthdesert.netlify.app/#website"
+            },
+            "about": {
+                "@id": "https://actionsinthdesert.netlify.app/#organization"
+            },
+            "mainEntity": {
+                "@id": "https://actionsinthdesert.netlify.app/#service"
+            },
+            "inLanguage": "he-IL",
+            "datePublished": "2024-01-01",
+            "dateModified": "2024-01-31"
+        }
+    ]
+}
