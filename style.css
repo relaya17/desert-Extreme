@@ -1,6 +1,198 @@
 * {
 	border-radius: 1rem;
 	font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+	box-sizing: border-box;
+}
+
+/* Language selector */
+.language-selector {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    border-bottom: 2px solid #3498db;
+    padding: 8px 0;
+}
+
+.language-selector .btn {
+    font-size: 12px;
+    padding: 4px 8px;
+    margin: 0 2px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.language-selector .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.language-selector .btn-primary {
+    background: #3498db;
+    border-color: #3498db;
+    font-weight: bold;
+}
+
+/* Language-specific direction settings */
+html[lang="en"], html[lang="ru"], html[lang="fr"] {
+    direction: ltr;
+}
+
+html[lang="ar"], html[lang="he"] {
+    direction: rtl;
+}
+
+/* ממרכז כל הפרויקט - Responsive Center Layout */
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	overflow-x: hidden;
+	direction: rtl;
+	text-align: center;
+}
+
+.container, .container-fluid {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/* ממרכז את כל הסקציות */
+section, div, header, footer {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* רספונסיבי עבור מובייל */
+@media (max-width: 768px) {
+	.container, .container-fluid {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	
+	.row {
+		margin-left: 0;
+		margin-right: 0;
+	}
+	
+	.col, .col-md-4, .col-md-6, .col-md-12 {
+		padding-left: 5px;
+		padding-right: 5px;
+		margin-bottom: 15px;
+	}
+}
+
+/* רספונסיבי עבור טאבלט */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.container, .container-fluid {
+		max-width: 750px;
+	}
+}
+
+/* רספונסיבי עבור מסכים גדולים */
+@media (min-width: 1200px) {
+	.container, .container-fluid {
+		max-width: 1140px;
+	}
+}
+
+
+
+/* תמונה עליונה */
+.top-image {
+	max-width: 90%;
+	height: auto;
+	border-radius: 15px;
+	box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+	margin: 20px auto;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	background: transparent;
+	display: block;
+}
+
+.top-image:hover {
+	transform: scale(1.02);
+	box-shadow: 0 12px 35px rgba(0,0,0,0.4);
+}
+
+/* הסרת רקע שחור מהקונטיינר של התמונה */
+.top-image-container {
+	background: transparent !important;
+	background-color: transparent !important;
+}
+
+/* רספונסיביות לתמונה העליונה */
+@media (max-width: 768px) {
+	.top-image {
+		margin: 15px auto;
+		border-radius: 10px;
+	}
+}
+
+/* רספונסיביות נוספת לכל הרכיבים */
+img, video {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: 0 auto;
+}
+
+.card {
+	margin: 0 auto 20px auto;
+	max-width: 100%;
+}
+
+.btn {
+	margin: 5px auto;
+	display: inline-block;
+}
+
+/* טבלה רספונסיבית */
+.table {
+	width: 100%;
+	margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+	.table {
+		font-size: 0.8rem;
+	}
+	
+	.table th, .table td {
+		padding: 8px 4px;
+	}
+}
+
+/* הידר וידאו רספונסיבי */
+.header-video {
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
+
+/* פורמים רספונסיביים */
+.form-control {
+	max-width: 400px;
+	margin: 0 auto 15px auto;
+}
+
+/* תצוגת רשת רספונסיבית */
+@media (max-width: 576px) {
+	.row > .col {
+		margin-bottom: 20px;
+	}
+	
+	h1 {
+		font-size: 1.8rem;
+	}
+	
+	h2 {
+		font-size: 1.5rem;
+	}
+	
+	h3 {
+		font-size: 1.3rem;
+	}
 }
 
 .header {
@@ -483,6 +675,34 @@ td:hover p {
 .security-note {
 	font-size: 0.8em;
 	color: #8fa4b6;
+}
+
+.package-button {
+	transition: all 0.3s ease;
+	border: 2px solid rgba(255, 255, 255, 0.3) !important;
+	background: rgba(255, 255, 255, 0.1) !important;
+	color: white !important;
+}
+
+.package-button:hover {
+	background: rgba(255, 255, 255, 0.2) !important;
+	border-color: rgba(255, 255, 255, 0.5) !important;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.package-button.active {
+	background: #007bff !important;
+	border-color: #007bff !important;
+	color: white !important;
+	transform: translateY(-2px);
+	box-shadow: 0 4px 12px rgba(0, 123, 255, 0.4);
+}
+
+.package-button .price {
+	font-weight: bold;
+	color: #ffcc00;
+	font-size: 1.1em;
 }
 
 #payment-form .btn-success {
