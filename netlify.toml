@@ -2,7 +2,13 @@
   publish = "."
   command = "echo 'Build complete'"
 
-# Custom 404 page
+# Default index page
+[[redirects]]
+  from = "/"
+  to = "/index.html"
+  status = 200
+
+# Custom 404 page - should be last
 [[redirects]]
   from = "/*"
   to = "/404.html"
