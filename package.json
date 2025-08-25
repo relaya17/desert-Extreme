@@ -1,9 +1,0 @@
-{
-  "name": "desert-extreme-static",
-  "version": "1.0.0",
-  "description": "Static HTML site - no dependencies required",
-  "private": true,
-  "scripts": {
-    "build": "echo 'Static HTML site - no build required'"
-  }
-}

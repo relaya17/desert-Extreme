@@ -3,12 +3,17 @@ package.json
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
+pnpm-workspace.yaml
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .npmrc
 .nvmrc
+# Ignore any potential TypeScript files
+*.ts
+*.tsx
+tsconfig.json
 
 # Ignore build artifacts
 dist/

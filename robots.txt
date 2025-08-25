@@ -15,6 +15,14 @@ Disallow: /.git/
 Disallow: /node_modules/
 Disallow: /*.log
 Disallow: /*.env
+# Block Node.js files
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /yarn.lock
+Disallow: /pnpm-lock.yaml
+Disallow: /*.ts
+Disallow: /*.tsx
+Disallow: /tsconfig.json
 
 # Allow CSS and JS for proper rendering
 Allow: /assets/css/

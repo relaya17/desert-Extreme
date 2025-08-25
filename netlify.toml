@@ -2,7 +2,7 @@
   publish = "."
   command = "echo 'Static HTML site - no build required'"
 
-# Prevent any Node.js processing
+# Completely disable Node.js processing
 [build.environment]
   SKIP_INSTALL = "true"
   NO_INSTALL = "true"
@@ -14,6 +14,9 @@
   NPM_CONFIG_PRODUCTION = "false"
   CI = "false"
   NETLIFY = "true"
+  # Force static site detection
+  NODE_VERSION = "0"
+  NPM_VERSION = "0"
 
 # Security headers
 [[headers]]

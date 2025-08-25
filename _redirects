@@ -27,4 +27,9 @@
 /package-lock.json 404
 /yarn.lock 404
 /pnpm-lock.yaml 404
-/node_modules/* 404 
+/pnpm-workspace.yaml 404
+/node_modules/* 404
+# Block TypeScript files
+/*.ts 404
+/*.tsx 404
+/tsconfig.json 404 
