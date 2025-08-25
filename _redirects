@@ -7,27 +7,7 @@
 /fr /locales/fr/index.html 200
 /ar /locales/ar/index.html 200
 
-# Common redirects
-/home /locales/he/index.html 301
-/main /locales/he/index.html 301
-/contact /locales/he/index.html#contact 301
-/about /locales/he/index.html#about 301
-/packages /locales/he/index.html#packages 301
-/payment /locales/he/index.html#payment 301
-
-# Specific language subdirectories
-/en/ /locales/en/index.html 200
-/ru/ /locales/ru/index.html 200
-/fr/ /locales/fr/index.html 200
-/ar/ /locales/ar/index.html 200
-
-# Language-specific 404 pages
-/en/* /locales/en/404-en.html 404
-/ru/* /pages/404.html 404
-/fr/* /pages/404.html 404
-/ar/* /pages/404.html 404
-
-# Catch-all redirect for unknown paths - use index.html as fallback
+# SPA catch-all redirect - redirect all unknown paths to index.html
 /* /index.html 200
 
 # Prevent access to Node.js files
