@@ -17,7 +17,7 @@
 
 # 404 redirects
 /en/* /locales/en/404-en.html 404
-/ru/* /locales/ru/404-ru.html 404
-/fr/* /locales/fr/404-fr.html 404
-/ar/* /locales/ar/404-ar.html 404
-/* /404.html 404 
+/ru/* /pages/404.html 404
+/fr/* /pages/404.html 404
+/ar/* /pages/404.html 404
+/* /pages/404.html 404 

@@ -3,10 +3,12 @@
     "version": "1.0.0",
     "description": "Desert Extreme - טיולי ג'יפים ואופנועים במדבר",
     "main": "index.html",
+    "type": "static",
     "scripts": {
-        "build": "echo 'Build complete - Static HTML site'",
+        "build": "echo 'Static HTML site - no build required'",
         "start": "echo 'Starting static site'",
-        "test": "echo 'No tests specified'"
+        "test": "echo 'No tests specified'",
+        "postinstall": "echo 'No dependencies to install'"
     },
     "keywords": [
         "desert",
@@ -14,7 +16,9 @@
         "jeep",
         "motorcycle",
         "adventure",
-        "israel"
+        "israel",
+        "static",
+        "html"
     ],
     "author": "Desert Extreme - ארלט",
     "license": "MIT",
@@ -23,7 +27,8 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/your-username/desert_Extreme.git"
+        "url": "https://github.com/relaya17/desert-Extreme.git"
     },
-    "homepage": "https://actionsinthdesert.netlify.app"
+    "homepage": "https://actionsinthdesert.netlify.app",
+    "private": true
 }
