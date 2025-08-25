@@ -8,7 +8,8 @@
         "build": "echo 'Static HTML site - no build required'",
         "start": "echo 'Starting static site'",
         "test": "echo 'No tests specified'",
-        "postinstall": "echo 'No dependencies to install'"
+        "postinstall": "echo 'No dependencies to install'",
+        "preinstall": "echo 'Skipping dependency installation'"
     },
     "keywords": [
         "desert",
@@ -30,5 +31,9 @@
         "url": "https://github.com/relaya17/desert-Extreme.git"
     },
     "homepage": "https://actionsinthdesert.netlify.app",
-    "private": true
+    "private": true,
+    "dependencies": {},
+    "devDependencies": {},
+    "optionalDependencies": {},
+    "peerDependencies": {}
 }

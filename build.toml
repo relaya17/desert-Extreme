@@ -1,0 +1,9 @@
+[build]
+  publish = "."
+  command = "echo 'Static HTML site - no build required'"
+
+[build.environment]
+  NODE_VERSION = "18"
+  SKIP_INSTALL = "true"
+  NO_INSTALL = "true"
+  NPM_CONFIG_IGNORE_SCRIPTS = "true"
