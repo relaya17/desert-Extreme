@@ -10,6 +10,7 @@ yarn-debug.log*
 yarn-error.log*
 .npmrc
 .nvmrc
+
 # Ignore any potential TypeScript files
 *.ts
 *.tsx
@@ -45,6 +46,3 @@ logs
 # Ignore temporary files
 tmp/
 temp/
-
-# Ignore Vercel files
-.vercel

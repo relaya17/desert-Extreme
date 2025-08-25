@@ -1,7 +1,7 @@
 services:
   - type: web
     name: desert-extreme
-    buildCommand: npm run build
+    buildCommand: echo "Static HTML site - no build required"
     staticPublishPath: .
     routes:
       - type: rewrite
@@ -25,4 +25,4 @@ services:
         value: "geolocation=(), microphone=(), camera=()"
     envVars:
       - key: NODE_VERSION
-        value: "18"
+        value: "0"

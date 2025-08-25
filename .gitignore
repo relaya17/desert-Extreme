@@ -14,6 +14,9 @@ pnpm-workspace.yaml
 *.tsx
 tsconfig.json
 
+# Vercel files
+.vercel
+
 # Build outputs
 dist/
 build/
