@@ -28,7 +28,7 @@
 	<title>גלריה - אקשן במדבר</title>
 
 	<!-- Favicon -->
-	<link rel="icon" href="../images/favicon.ico" sizes="32x32" type="image/x-icon" />
+	<link rel="icon" href="../assets/images/iconn.png" sizes="32x32" type="image/x-icon" />
 
 	<!-- Bootstrap CSS -->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -204,8 +204,13 @@
 		}
 
 		@keyframes spin {
-			0% { transform: rotate(0deg); }
-			100% { transform: rotate(360deg); }
+			0% {
+				transform: rotate(0deg);
+			}
+
+			100% {
+				transform: rotate(360deg);
+			}
 		}
 
 		/* Filter Buttons */
@@ -269,7 +274,8 @@
 		}
 
 		/* Navigation arrows */
-		.prev, .next {
+		.prev,
+		.next {
 			cursor: pointer;
 			position: absolute;
 			top: 50%;
@@ -290,7 +296,8 @@
 			border-radius: 3px 0 0 3px;
 		}
 
-		.prev:hover, .next:hover {
+		.prev:hover,
+		.next:hover {
 			background-color: rgba(0, 0, 0, 0.8);
 		}
 	</style>
@@ -357,42 +364,42 @@
 				id: 1,
 				title: "טיול ג'יפים בדיונות",
 				description: "חוויה מדהימה בדיונות החול של אילת",
-				image: "../images/blou.png",
+				image: "../assets/images/blou.png",
 				category: "jeeps"
 			},
 			{
 				id: 2,
 				title: "נוף מדברי מרהיב",
 				description: "תצפית על הנוף המדברי הייחודי",
-				image: "../images/sky.png",
+				image: "../assets/images/sky.png",
 				category: "landscapes"
 			},
 			{
 				id: 3,
 				title: "רכיבה על אופנועי שטח",
 				description: "אדרנלין טהור על אופנועי שטח",
-				image: "../images/haruds.png",
+				image: "../assets/images/haruds.png",
 				category: "motorcycles"
 			},
 			{
 				id: 4,
 				title: "קבוצה שמחה",
 				description: "לקוחות מרוצים מהחוויה",
-				image: "../images/pic.png",
+				image: "../assets/images/pic.png",
 				category: "people"
 			},
 			{
 				id: 5,
 				title: "ג'יפ בשטח",
 				description: "ג'יפ עובר בשביל מדברי",
-				image: "../images/bbb.png",
+				image: "../assets/images/bbb.png",
 				category: "jeeps"
 			},
 			{
 				id: 6,
 				title: "רגע של שקט",
 				description: "השקיעה המדברית",
-				image: "../images/kobiImage.png",
+				image: "../assets/images/kobiImage.png",
 				category: "landscapes"
 			}
 		];
@@ -401,7 +408,7 @@
 		let filteredData = [...galleryData];
 
 		// Initialize gallery
-		document.addEventListener('DOMContentLoaded', function() {
+		document.addEventListener('DOMContentLoaded', function () {
 			renderGallery();
 			setupEventListeners();
 		});
@@ -429,10 +436,10 @@
 		function setupEventListeners() {
 			// Filter buttons
 			document.querySelectorAll('.filter-btn').forEach(btn => {
-				btn.addEventListener('click', function() {
+				btn.addEventListener('click', function () {
 					const filter = this.getAttribute('data-filter');
 					filterGallery(filter);
-					
+
 					// Update active button
 					document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
 					this.classList.add('active');
@@ -441,9 +448,9 @@
 
 			// Modal close
 			document.querySelector('.close').addEventListener('click', closeModal);
-			
+
 			// Close modal when clicking outside
-			window.addEventListener('click', function(event) {
+			window.addEventListener('click', function (event) {
 				const modal = document.getElementById('imageModal');
 				if (event.target === modal) {
 					closeModal();
@@ -466,7 +473,7 @@
 			currentImageIndex = index;
 			const modal = document.getElementById('imageModal');
 			const modalImg = document.getElementById('modalImage');
-			
+
 			modalImg.src = filteredData[index].image;
 			modal.style.display = 'block';
 		}
@@ -479,18 +486,18 @@
 		// Change image in modal
 		function changeImage(direction) {
 			currentImageIndex += direction;
-			
+
 			if (currentImageIndex >= filteredData.length) {
 				currentImageIndex = 0;
 			} else if (currentImageIndex < 0) {
 				currentImageIndex = filteredData.length - 1;
 			}
-			
+
 			document.getElementById('modalImage').src = filteredData[currentImageIndex].image;
 		}
 
 		// Keyboard navigation
-		document.addEventListener('keydown', function(e) {
+		document.addEventListener('keydown', function (e) {
 			if (document.getElementById('imageModal').style.display === 'block') {
 				if (e.key === 'Escape') {
 					closeModal();
