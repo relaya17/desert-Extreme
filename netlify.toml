@@ -2,33 +2,16 @@
   publish = "."
   command = "echo 'Static HTML site - no build required'"
 
-# Completely disable Node.js processing
+# Disable all Node.js processing
 [build.environment]
   SKIP_INSTALL = "true"
   NO_INSTALL = "true"
   NODE_ENV = "production"
   NPM_CONFIG_IGNORE_SCRIPTS = "true"
-  NPM_CONFIG_AUDIT = "false"
-  NPM_CONFIG_FUND = "false"
-  NPM_CONFIG_OPTIONAL = "false"
-  NPM_CONFIG_PRODUCTION = "false"
   CI = "false"
   NETLIFY = "true"
-  # Force static site detection
   NODE_VERSION = "0"
   NPM_VERSION = "0"
-  # Additional Node.js blocking
-  NPM_CONFIG_SCRIPTS_PREPEND_NODE_PATH = "false"
-  NPM_CONFIG_SCRIPTS_PREPEND_PREFIX = "false"
-  NPM_CONFIG_SCRIPTS_PREPEND_BIN = "false"
-  # Disable package managers
-  NPM_CONFIG_UPDATE_NOTIFIER = "false"
-  NPM_CONFIG_PREFER_OFFLINE = "true"
-  NPM_CONFIG_CACHE = "/tmp/.npm"
-  # Force static build
-  NETLIFY_USE_YARN = "false"
-  NETLIFY_USE_NPM = "false"
-  NETLIFY_USE_PNPM = "false"
 
 # Security headers
 [[headers]]

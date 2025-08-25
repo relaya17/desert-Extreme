@@ -1,23 +1,2 @@
-# SPA catch-all redirect - redirect all unknown paths to index.html
-/* /index.html 200
-
-# Root redirect to Hebrew version
-/ /locales/he/index.html 200
-
-# Language redirects
-/en /locales/en/index.html 200
-/ru /locales/ru/index.html 200
-/fr /locales/fr/index.html 200
-/ar /locales/ar/index.html 200
-
-# Prevent access to Node.js files
-/package.json 404
-/package-lock.json 404
-/yarn.lock 404
-/pnpm-lock.yaml 404
-/pnpm-workspace.yaml 404
-/node_modules/* 404
-# Block TypeScript files
-/*.ts 404
-/*.tsx 404
-/tsconfig.json 404 
+# Simple SPA redirect - all paths go to index.html
+/* /index.html 200 
