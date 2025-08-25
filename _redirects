@@ -1,2 +1,11 @@
 # Simple SPA redirect - all paths go to index.html
-/* /index.html 200 
+/* /index.html 200
+
+# Specific redirects for common paths
+/blog /blog/blog.html 200
+/gallery /pages/gallery.html 200
+/contact /index.html#contact 200
+/about /index.html#about 200
+
+# 404 page
+/404.html /404.html 404 

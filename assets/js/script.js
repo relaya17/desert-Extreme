@@ -2,7 +2,11 @@ function scrollToActivities() {
   document.getElementById("activities").scrollIntoView({ behavior: "smooth" });
 }
 
-const videos = ["images/kobiVideo.mp4", "images/kkk.mp4", "images/hhh.mp4"];
+const videos = [
+  "assets/images/kobiVideo.mp4",
+  "assets/images/kkk.mp4",
+  "assets/images/hhh.mp4",
+];
 
 function getVideoIndex() {
   const currentTime = new Date().getTime();
