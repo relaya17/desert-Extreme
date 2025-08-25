@@ -1,8 +1,7 @@
 services:
   - type: web
     name: desert-extreme
-    env: static
-    buildCommand: echo "Build complete"
+    buildCommand: npm run build
     staticPublishPath: .
     routes:
       - type: rewrite
@@ -24,3 +23,6 @@ services:
       - path: /*
         name: Permissions-Policy
         value: "geolocation=(), microphone=(), camera=()"
+    envVars:
+      - key: NODE_VERSION
+        value: "18"
