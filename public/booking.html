@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="he">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>הזמנת טרקטורון</title>
 
   <!-- קבצי CSS -->
   <link rel="stylesheet" href="booking.css" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css" />
 </head>
+
 <body>
 
   <div id="booking-box">
-<<<<<<< HEAD
     <h2>הזמנות</h2>
 
-=======
     <h2>הזמנת טרקטורון</h2>
->>>>>>> parent of f39b81b (Update booking.html)
     <!-- שדות אישיים -->
     <input type="text" id="userName" placeholder="שם מלא" />
     <input type="number" id="userAge" placeholder="גיל" />
 
     <!-- תאריך ושעה -->
     <input type="text" id="datePicker" placeholder="בחר תאריך">
-    <select id="timeSelect"></select>
+    <select id="timeSelect" aria-label="בחר שעה"></select>
     <button onclick="bookSlot()">הזמן</button>
 
     <div id="confirmation"></div>
@@ -36,4 +35,5 @@
   <script src="scrpt.js"></script>
 
 </body>
+
 </html>
