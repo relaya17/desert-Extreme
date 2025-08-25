@@ -1,0 +1,27 @@
+# Ignore everything except static files
+*
+!*.html
+!*.css
+!*.js
+!*.png
+!*.jpg
+!*.jpeg
+!*.gif
+!*.svg
+!*.ico
+!*.woff
+!*.woff2
+!*.ttf
+!*.eot
+!*.mp4
+!*.webm
+!*.mp3
+!*.wav
+!*.pdf
+!*.xml
+!*.txt
+!*.json
+!robots.txt
+!sitemap.xml
+!_redirects
+!netlify.toml
