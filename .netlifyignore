@@ -1,8 +1,20 @@
-# Ignore build artifacts
+# Ignore Node.js files completely
+package.json
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
 node_modules/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.npmrc
+.nvmrc
+
+# Ignore build artifacts
+dist/
+build/
+.next/
+out/
 
 # Ignore development files
 .env

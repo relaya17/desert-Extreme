@@ -20,4 +20,11 @@
 /ru/* /pages/404.html 404
 /fr/* /pages/404.html 404
 /ar/* /pages/404.html 404
-/* /pages/404.html 404 
+/* /pages/404.html 404
+
+# Prevent access to Node.js files
+/package.json 404
+/package-lock.json 404
+/yarn.lock 404
+/pnpm-lock.yaml 404
+/node_modules/* 404 
