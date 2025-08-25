@@ -27,8 +27,8 @@
 /fr/* /pages/404.html 404
 /ar/* /pages/404.html 404
 
-# Catch-all redirect for unknown paths
-/* /locales/he/index.html 200
+# Catch-all redirect for unknown paths - use index.html as fallback
+/* /index.html 200
 
 # Prevent access to Node.js files
 /package.json 404
