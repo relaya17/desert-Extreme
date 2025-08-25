@@ -22,17 +22,6 @@
   NPM_CONFIG_SCRIPTS_PREPEND_PREFIX = "false"
   NPM_CONFIG_SCRIPTS_PREPEND_BIN = "false"
 
-# Redirects for SPA behavior
-[[redirects]]
-  from = "/"
-  to = "/locales/he/index.html"
-  status = 200
-
-[[redirects]]
-  from = "/*"
-  to = "/locales/he/index.html"
-  status = 200
-
 # Security headers
 [[headers]]
   for = "/*"

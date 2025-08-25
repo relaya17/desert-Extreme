@@ -1,3 +1,6 @@
+# Root redirect to Hebrew version
+/ /locales/he/index.html 200
+
 # Language redirects
 /en /locales/en/index.html 200
 /ru /locales/ru/index.html 200
@@ -23,6 +26,9 @@
 /ru/* /pages/404.html 404
 /fr/* /pages/404.html 404
 /ar/* /pages/404.html 404
+
+# Catch-all redirect for unknown paths
+/* /locales/he/index.html 200
 
 # Prevent access to Node.js files
 /package.json 404
