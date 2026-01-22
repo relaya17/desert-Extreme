@@ -1,0 +1,16 @@
+# Astro
+node_modules
+dist
+.astro
+
+# VS Code
+.vscode
+.history
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment variables
+.env
+.env.*

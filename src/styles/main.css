@@ -1,0 +1,21 @@
+/* Main CSS file that imports all other CSS files */
+
+/* Import Variables and Base Styles */
+@import url("variables.css");
+@import url("base.css");
+
+/* Import Component Styles */
+@import url("navbar.css");
+@import url("header.css");
+@import url("tours.css");
+@import url("testimonials.css");
+@import url("booking.css");
+@import url("gallery.css");
+@import url("footer.css");
+
+/* Import Additional Styles */
+@import url("style.css");
+@import url("../assets/images/logo.css");
+@import url("additional-styles.css");
+
+/* Any additional site-wide styles can be added here */

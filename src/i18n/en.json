@@ -1,0 +1,28 @@
+{
+  "title": "Desert Extreme",
+  "subtitle": "Extreme Desert Adventure!",
+  "special_offer": "📢 Special offer for groups! Crazy prices - call now! 🏷️",
+  "nav": {
+    "activities": "Activities",
+    "blog": "📖 Blog",
+    "booking": "💳 Booking & Payment",
+    "contact": "📞 Contact"
+  },
+  "hero": {
+    "who_we_are": "Who Are We?",
+    "description": "Discover the magic of Eilat from a different perspective! Join our adrenaline-filled jeep tour through Eilat's mountains, stunning sandstone canyons and hidden desert oases.",
+    "features": [
+      "🌵 Self or Guided Driving",
+      "🌅 Amazing Viewpoints",
+      "🔥 Unforgettable Atmosphere"
+    ],
+    "ready": "Ready for an adventure? 🚀"
+  },
+  "packages": {
+    "title": "💳 Book Now and Pay Securely",
+    "select": "Choose a Package and Pay Securely with Stripe",
+    "basic": "Basic Package - Jeep Tour (2 hours)",
+    "premium": "Premium Package - Jeep Tour (4 hours)",
+    "extreme": "Extreme Package - Combined Jeeps and ATVs"
+  }
+}

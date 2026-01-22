@@ -1,0 +1,80 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Header from '../components/Header.astro';
+import he from '../i18n/he.json';
+
+const t = he;
+---
+
+<MainLayout lang="he" title={t.title}>
+    <Header t={t} lang="he" />
+    
+    <main>
+        <div class="container-fluid header-info text-center py-5">
+            <h1 class="mb-4">{t.hero.who_we_are}</h1>
+            <div class="row justify-content-center">
+                <div class="col-md-12 mb-4">
+                    <div class="card p-4 h-100 shadow">
+                        <h4>{t.hero.description}</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 g-3">
+                {t.hero.features.map((feature) => (
+                    <div class="col">
+                        <div class="card p-3 h-100 shadow">
+                            <h4>{feature}</h4>
+                        </div>
+                    </div>
+                ))}
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <div class="card p-4 h-100 shadow">
+                        <h4>{t.hero.ready}</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activities Section (Static for now, can be modularized later) -->
+        <div class="container-fluid mt-5" id="activities">
+            <!-- ... activities content ... -->
+        </div>
+
+        <!-- Payment Section -->
+        <section class="payment-section container text-center mt-5" id="payment">
+            <h2>{t.packages.title}</h2>
+            <div class="row mt-4">
+                <div class="col-md-6 mx-auto">
+                    <div class="card payment-card p-4">
+                        <h3 class="mb-4">{t.packages.select}</h3>
+                        <div id="package-buttons" class="d-flex flex-column gap-3 mb-4">
+                            <button type="button" class="btn btn-outline-light package-button" data-package="basic" data-price="350">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>{t.packages.basic}</span>
+                                    <span class="price">₪350</span>
+                                </div>
+                            </button>
+                            <button type="button" class="btn btn-outline-light package-button" data-package="premium" data-price="650">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>{t.packages.premium}</span>
+                                    <span class="price">₪650</span>
+                                </div>
+                            </button>
+                            <button type="button" class="btn btn-outline-light package-button" data-package="extreme" data-price="850">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span>{t.packages.extreme}</span>
+                                    <span class="price">₪850</span>
+                                </div>
+                            </button>
+                        </div>
+                        <button id="checkout-button" class="btn btn-success btn-lg w-100 mb-3" disabled>
+                            <i class="fas fa-lock me-2"></i> המשך לתשלום מאובטח
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</MainLayout>
