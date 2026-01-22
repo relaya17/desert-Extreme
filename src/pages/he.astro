@@ -1,6 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
 import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 import he from '../i18n/he.json';
 
 const t = he;
@@ -38,7 +39,36 @@ const t = he;
         </div>
 
         <div class="container-fluid mt-5" id="activities">
-            <!-- Activities will be added here -->
+            <!-- Activities Section -->
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100 p-3">
+                        <img src="/images/geep.png" class="card-img-top" alt="ג'יפים במדבר" />
+                        <div class="card-body text-center">
+                            <h3 class="card-title">ג'יפים במדבר</h3>
+                            <p class="card-text">חוויית נהיגה מרגשת בג'יפים בלב המדבר!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 p-3">
+                        <img src="/images/sky.png" class="card-img-top" alt="טיולי ג'יפים" />
+                        <div class="card-body text-center">
+                            <h3 class="card-title">טיולי ג'יפים</h3>
+                            <p class="card-text">נסיעה מסחררת בין קניונים ושבילי מדבר קסומים.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 p-3">
+                        <img src="/images/haruds.png" class="card-img-top" alt="טיולי ג'יפים" />
+                        <div class="card-body text-center">
+                            <h3 class="card-title">אתם מוכנים ?</h3>
+                            <p class="card-text">חוויה בלתי נשכחת</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <section class="payment-section container text-center mt-5" id="payment">
@@ -51,28 +81,30 @@ const t = he;
                             <button type="button" class="btn btn-outline-light package-button" data-package="basic" data-price="350">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span>{t.packages.basic}</span>
-                                    <span class="price">?350</span>
+                                    <span class="price">₪350</span>
                                 </div>
                             </button>
                             <button type="button" class="btn btn-outline-light package-button" data-package="premium" data-price="650">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span>{t.packages.premium}</span>
-                                    <span class="price">?650</span>
+                                    <span class="price">₪650</span>
                                 </div>
                             </button>
                             <button type="button" class="btn btn-outline-light package-button" data-package="extreme" data-price="850">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <span>{t.packages.extreme}</span>
-                                    <span class="price">?850</span>
+                                    <span class="price">₪850</span>
                                 </div>
                             </button>
                         </div>
                         <button id="checkout-button" class="btn btn-success btn-lg w-100 mb-3" disabled>
-                            <i class="fas fa-lock me-2"></i> ???? ?????? ??????
+                            <i class="fas fa-lock me-2"></i> המשך לתשלום מאובטח
                         </button>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <Footer t={t} />
 </MainLayout>

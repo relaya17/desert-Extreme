@@ -97,9 +97,9 @@ document.addEventListener("DOMContentLoaded", function () {
       integrationSteps: "لإكمال التكامل الحقيقي:",
       step1: "أنשئ حساب Stripe إذا لم يكن لديك واحد",
       step2: "أنשئ روابط الدفع في Stripe Dashboard",
-      step3: "استبدל الروابط التجريبية في الكود بالحقيقية",
-      step4: "احذف كود العرض التوضיحي هذا",
-      backToForm: "العودة للنموذج",
+      step3: "استبدל الروابط التجريبية في הכוד بالحقيقية",
+      step4: "احذف כוד العرض التوضيחי הזה",
+      backToForm: "العودة לنموذג",
     },
   };
 
@@ -204,7 +204,7 @@ document.addEventListener("DOMContentLoaded", function () {
  * Show success message after payment submission
  * @returns {void}
  */
-function showPaymentSuccessMessage() {
+export function showPaymentSuccessMessage() {
   /** @type {string} */
   const currentLang = document.documentElement.lang || "he";
   
@@ -262,10 +262,10 @@ function showPaymentSuccessMessage() {
       selectPackage: "يرجى اختيار باقة أولاً",
       processing: "جاري المعالجة...",
       successTitle: "تم التسجيل بنجاح!",
-      successMessage: "في هذا العرض التوضيحي، في الواقع سيتم توجيهك إلى صفحة الدفع الآمنة في Stripe.",
+      successMessage: "في هذا العرض التوضיحي، في الواقع سيتم توجيهك إلى صفحة הדفع الآمنة في Stripe.",
       integrationSteps: "لإكمال التكامل الحقيقي:",
       step1: "أنشئ حساب Stripe إذا لم يكن لديك واحد",
-      step2: "أنشئ روابط الدفع في Stripe Dashboard",
+      step2: "أنشئ روابط הדفع في Stripe Dashboard",
       step3: "استبدל الروابط التجريبية في הכוד بالحقيقية",
       step4: "احذف כוד العرض التوضיחי הזה",
       backToForm: "العودة לنموذג",
@@ -307,7 +307,7 @@ function showPaymentSuccessMessage() {
  * Reset payment form to original state
  * @returns {void}
  */
-function resetPaymentForm() {
+export function resetPaymentForm() {
   /** @type {HTMLElement | null} */
   const paymentCard = document.querySelector(".payment-card");
   if (paymentCard && paymentCard.dataset.originalContent) {
@@ -323,6 +323,13 @@ function resetPaymentForm() {
  * This function is kept for compatibility but the main event listeners are in DOMContentLoaded
  * @returns {void}
  */
-function initializeListeners() {
+export function initializeListeners() {
   console.log("Event listeners already initialized in DOMContentLoaded");
+}
+
+// Attach functions to window object for HTML onclick compatibility
+if (typeof window !== 'undefined') {
+  window.showPaymentSuccessMessage = showPaymentSuccessMessage;
+  window.resetPaymentForm = resetPaymentForm;
+  window.initializeListeners = initializeListeners;
 }

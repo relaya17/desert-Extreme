@@ -2,7 +2,7 @@
  * Scrolls the page to the activities section smoothly.
  * @returns {void}
  */
-function scrollToActivities() {
+export function scrollToActivities() {
   const activities = document.getElementById("activities");
   if (activities) {
     activities.scrollIntoView({ behavior: "smooth" });
@@ -11,9 +11,9 @@ function scrollToActivities() {
 
 /** @type {string[]} */
 const videos = [
-  "assets/images/kobiVideo.mp4",
-  "assets/images/kkk.mp4",
-  "assets/images/hhh.mp4",
+  "/images/kobiVideo.mp4",
+  "/images/kkk.mp4",
+  "/images/hhh.mp4",
 ];
 
 /**
@@ -30,7 +30,7 @@ function getVideoIndex() {
  * Updates the header video source.
  * @returns {void}
  */
-function updateVideo() {
+export function updateVideo() {
   /** @type {HTMLVideoElement | null} */
   const videoElement = document.querySelector("#headerVideo");
   /** @type {HTMLSourceElement | null} */
@@ -45,7 +45,7 @@ function updateVideo() {
  * Displays the hidden phone number element.
  * @returns {void}
  */
-function showPhoneNumber() {
+export function showPhoneNumber() {
   /** @type {HTMLElement | null} */
   const phoneNumber = document.getElementById("phone-number");
   if (phoneNumber) {
@@ -60,7 +60,7 @@ const countdownDate = new Date().getTime() + 24 * 60 * 60 * 1000;
  * Updates the countdown timer display.
  * @returns {void}
  */
-function updateCountdown() {
+export function updateCountdown() {
   const now = new Date().getTime();
   const distance = countdownDate - now;
   /** @type {HTMLElement | null} */
@@ -95,7 +95,7 @@ let linksHighlighted = false;
  * Toggles the body font size for accessibility.
  * @returns {void}
  */
-function increaseTextSize() {
+export function increaseTextSize() {
   document.body.style.fontSize = fontSizeIncreased ? "" : "1.3em";
   fontSizeIncreased = !fontSizeIncreased;
 }
@@ -104,7 +104,7 @@ function increaseTextSize() {
  * Toggles high contrast mode for accessibility.
  * @returns {void}
  */
-function toggleContrast() {
+export function toggleContrast() {
   document.body.classList.toggle("high-contrast");
   contrastEnabled = !contrastEnabled;
 }
@@ -113,7 +113,7 @@ function toggleContrast() {
  * Toggles highlighting for all links on the page.
  * @returns {void}
  */
-function highlightLinks() {
+export function highlightLinks() {
   /** @type {NodeListOf<HTMLAnchorElement>} */
   const links = document.querySelectorAll("a");
   links.forEach((link) => {
@@ -134,7 +134,7 @@ function highlightLinks() {
  * Resets all accessibility settings to default.
  * @returns {void}
  */
-function resetAccessibility() {
+export function resetAccessibility() {
   document.body.style.fontSize = "";
   document.body.classList.remove("high-contrast");
   /** @type {NodeListOf<HTMLAnchorElement>} */
@@ -160,7 +160,7 @@ let currentLoopIndex = 0;
  * Sets up the video player loop.
  * @returns {void}
  */
-function setupLoopVideo() {
+export function setupLoopVideo() {
   /** @type {HTMLVideoElement | null} */
   const videoPlayer = document.getElementById("videoPlayer");
   /** @type {HTMLSourceElement | null} */
@@ -176,6 +176,19 @@ function setupLoopVideo() {
   });
 
   videoPlayer.play().catch(err => console.log("Auto-play blocked or failed", err));
+}
+
+// Attach functions to window object for HTML onclick compatibility
+if (typeof window !== 'undefined') {
+  window.scrollToActivities = scrollToActivities;
+  window.updateVideo = updateVideo;
+  window.showPhoneNumber = showPhoneNumber;
+  window.updateCountdown = updateCountdown;
+  window.increaseTextSize = increaseTextSize;
+  window.toggleContrast = toggleContrast;
+  window.highlightLinks = highlightLinks;
+  window.resetAccessibility = resetAccessibility;
+  window.setupLoopVideo = setupLoopVideo;
 }
 
 document.addEventListener("DOMContentLoaded", function () {
