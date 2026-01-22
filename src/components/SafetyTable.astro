@@ -1,0 +1,35 @@
+---
+const { t } = Astro.props;
+---
+<section class="container-fluid g-3 mt-4 text-center gap-2">
+    <table class="table table-bordered w-100">
+        <thead>
+            <tr>
+                <th class="text-center">{t.safety.equipment}</th>
+                <th class="text-center">{t.safety.vehicles}</th>
+                <th class="text-center">{t.safety.navigation}</th>
+                <th class="text-center">{t.safety.guides}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="text-center">
+                    <i class="fas fa-hard-hat fa-3x text-primary"></i>
+                    <p>{t.safety.equipment_desc}</p>
+                </td>
+                <td class="text-center">
+                    <i class="fas fa-car-crash fa-3x text-danger"></i>
+                    <p>{t.safety.vehicles_desc}</p>
+                </td>
+                <td class="text-center">
+                    <i class="fas fa-map-marked-alt fa-3x text-success"></i>
+                    <p>{t.safety.navigation_desc}</p>
+                </td>
+                <td class="text-center">
+                    <i class="fas fa-user-shield fa-3x text-warning"></i>
+                    <p>{t.safety.guides_desc}</p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>

@@ -18,6 +18,47 @@
     ],
     "ready": "Ready for an adventure? 🚀"
   },
+  "safety": {
+    "equipment": "Full Safety Equipment",
+    "equipment_desc": "We provide helmets, safety goggles and more to keep you safe.",
+    "vehicles": "Secured Vehicles",
+    "vehicles_desc": "All vehicles undergo thorough inspections and are terrain-ready.",
+    "navigation": "Safe Navigation",
+    "navigation_desc": "Every route is pre-planned with safe stopping points.",
+    "guides": "Expert Guides",
+    "guides_desc": "Certified team will accompany you throughout the journey."
+  },
+  "activities": {
+    "jeeps_title": "Desert Jeeps",
+    "jeeps_desc": "Exciting jeep driving experience in the heart of the desert!",
+    "tours_title": "Jeep Tours",
+    "tours_desc": "Thrilling ride through canyons and magical desert trails.",
+    "ready_title": "Are You Ready?",
+    "ready_desc": "An unforgettable experience",
+    "action_title": "Real Action in the Field",
+    "action_desc": "Adrenaline-filled tour with breathtaking views.",
+    "team_title": "Professional Guides",
+    "team_desc": "Expert team that will accompany you safely."
+  },
+  "testimonials": {
+    "title": "What Our Customers Say...",
+    "review1": "Crazy experience! The best tour I did in the desert. Highly recommend!",
+    "review1_author": "Danny M.",
+    "review2": "The views, the driving, the atmosphere - simply amazing! Thanks to the lovely team!",
+    "review2_author": "Yael S.",
+    "review3": "Unforgettable experience for the whole family, professional service and amazing feeling!",
+    "review3_author": "Ronit L."
+  },
+  "video": {
+    "title": "Customers Share Their Experience 🎥"
+  },
+  "contact": {
+    "title": "📩 Want to hear more? Leave your details:",
+    "name": "Full Name",
+    "phone": "Phone Number",
+    "submit": "Send Message"
+  },
+  "call_now": "Call Now",
   "packages": {
     "title": "💳 Book Now and Pay Securely",
     "select": "Choose a Package and Pay Securely with Stripe",

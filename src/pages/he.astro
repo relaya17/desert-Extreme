@@ -2,6 +2,11 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import SafetyTable from '../components/SafetyTable.astro';
+import CallButton from '../components/CallButton.astro';
+import Testimonials from '../components/Testimonials.astro';
+import VideoSection from '../components/VideoSection.astro';
+import ContactForm from '../components/ContactForm.astro';
 import he from '../i18n/he.json';
 
 const t = he;
@@ -9,6 +14,8 @@ const t = he;
 
 <MainLayout lang="he" title={t.title}>
     <Header t={t} lang="he" />
+    
+    <SafetyTable t={t} />
     
     <main>
         <div class="container-fluid header-info text-center py-5">
@@ -38,15 +45,16 @@ const t = he;
             </div>
         </div>
 
+        <CallButton t={t} />
+
         <div class="container-fluid mt-5" id="activities">
-            <!-- Activities Section -->
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <div class="col">
                     <div class="card h-100 p-3">
                         <img src="/images/geep.png" class="card-img-top" alt="ג'יפים במדבר" />
                         <div class="card-body text-center">
-                            <h3 class="card-title">ג'יפים במדבר</h3>
-                            <p class="card-text">חוויית נהיגה מרגשת בג'יפים בלב המדבר!</p>
+                            <h3 class="card-title">{t.activities.jeeps_title}</h3>
+                            <p class="card-text">{t.activities.jeeps_desc}</p>
                         </div>
                     </div>
                 </div>
@@ -54,8 +62,8 @@ const t = he;
                     <div class="card h-100 p-3">
                         <img src="/images/sky.png" class="card-img-top" alt="טיולי ג'יפים" />
                         <div class="card-body text-center">
-                            <h3 class="card-title">טיולי ג'יפים</h3>
-                            <p class="card-text">נסיעה מסחררת בין קניונים ושבילי מדבר קסומים.</p>
+                            <h3 class="card-title">{t.activities.tours_title}</h3>
+                            <p class="card-text">{t.activities.tours_desc}</p>
                         </div>
                     </div>
                 </div>
@@ -63,13 +71,35 @@ const t = he;
                     <div class="card h-100 p-3">
                         <img src="/images/haruds.png" class="card-img-top" alt="טיולי ג'יפים" />
                         <div class="card-body text-center">
-                            <h3 class="card-title">אתם מוכנים ?</h3>
-                            <p class="card-text">חוויה בלתי נשכחת</p>
+                            <h3 class="card-title">{t.activities.ready_title}</h3>
+                            <p class="card-text">{t.activities.ready_desc}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 p-3">
+                        <img src="/images/pic.png" class="card-img-top" alt="אקשן בשטח" />
+                        <div class="card-body text-center">
+                            <h3 class="card-title">{t.activities.action_title}</h3>
+                            <p class="card-text">{t.activities.action_desc}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 p-3">
+                        <img src="/images/bbb.png" class="card-img-top" alt="מדריכים" />
+                        <div class="card-body text-center">
+                            <h3 class="card-title">{t.activities.team_title}</h3>
+                            <p class="card-text">{t.activities.team_desc}</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <Testimonials t={t} />
+
+        <VideoSection t={t} />
 
         <section class="payment-section container text-center mt-5" id="payment">
             <h2>{t.packages.title}</h2>
@@ -100,10 +130,15 @@ const t = he;
                         <button id="checkout-button" class="btn btn-success btn-lg w-100 mb-3" disabled>
                             <i class="fas fa-lock me-2"></i> המשך לתשלום מאובטח
                         </button>
+                        <p class="text-center security-note">
+                            <i class="fas fa-shield-alt"></i> כל העסקאות מאובטחות בתקן SSL עם Stripe
+                        </p>
                     </div>
                 </div>
             </div>
         </section>
+
+        <ContactForm t={t} />
     </main>
 
     <Footer t={t} />

@@ -1,0 +1,9 @@
+---
+const { t } = Astro.props;
+---
+<div class="container-fluid text-center my-4">
+    <button class="btn btn-primary callNowBtn" onclick="showPhoneNumber()">
+        {t.call_now}
+    </button>
+    <p id="phone-number" class="phone-number">📞 053-3919193</p>
+</div>
