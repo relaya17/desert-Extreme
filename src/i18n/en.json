@@ -59,6 +59,20 @@
     "submit": "Send Message"
   },
   "call_now": "Call Now",
+  "gallery": {
+    "title": "📸 Our Photo Gallery",
+    "jeep": "Desert Jeeps",
+    "sky": "Open Skies",
+    "haruds": "Extreme Adventures",
+    "action": "Real Action",
+    "guides": "Professional Guides",
+    "adventure": "Desert Adventure",
+    "landscape": "Breathtaking Views",
+    "nature": "Wild Nature",
+    "experience1": "Unforgettable Experience",
+    "experience2": "Special Moments",
+    "experience3": "Memories for Life"
+  },
   "packages": {
     "title": "💳 Book Now and Pay Securely",
     "select": "Choose a Package and Pay Securely with Stripe",
